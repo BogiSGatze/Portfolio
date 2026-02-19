@@ -1,0 +1,588 @@
+[00:03:41.763] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open 'D:\Portfolio\retro-computer-3d\dist\dev\server\app\_not-found\page\build-manifest.json'
+[00:03:41.790] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open 'D:\Portfolio\retro-computer-3d\dist\dev\server\app\_not-found\page\build-manifest.json'
+[00:03:41.811] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open 'D:\Portfolio\retro-computer-3d\dist\dev\server\app\_not-found\page\build-manifest.json'
+[00:03:41.831] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open 'D:\Portfolio\retro-computer-3d\dist\dev\server\app\_not-found\page\build-manifest.json'
+[00:03:41.848] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open 'D:\Portfolio\retro-computer-3d\dist\dev\server\app\_not-found\page\build-manifest.json'
+[00:03:41.866] Server  ERROR   ⨯ Error: ENOENT: no such file or directory, open 'D:\Portfolio\retro-computer-3d\dist\dev\server\app\_not-found\page\build-manifest.json'
+[00:03:41.870] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.872] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.875] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.883] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:03:41.883] Browser WARN    THREE.FBXLoader: %s map is not supported in three.js, skipping texture. ShininessExponent
+[00:03:41.883] Browser WARN    THREE.FBXLoader: %s map is not supported in three.js, skipping texture. ShininessExponent
+[00:03:41.883] Browser WARN    THREE.FBXLoader: %s map is not supported in three.js, skipping texture. ShininessExponent
+[00:03:41.883] Browser WARN    THREE.FBXLoader: %s map is not supported in three.js, skipping texture. ShininessExponent
+[00:03:41.883] Browser WARN    THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead.
+[00:03:41.885] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.889] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.893] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.897] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.900] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.903] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.921] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.923] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.925] Server  ERROR   ⨯ TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.929] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.934] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.936] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.939] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.942] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)
+[00:03:41.946] Server  ERROR   TurbopackInternalError: Failed to write page endpoint /_app
+
+Caused by:
+- content is not available as task execution failed
+- content is not available as task execution failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+
+Debug info:
+- Execution of get_written_endpoint_with_issues_operation failed
+- Execution of endpoint_write_to_disk failed
+- Execution of <PageEndpoint as Endpoint>::output failed
+- Failed to write page endpoint /_app
+- Execution of PageEndpoint::output failed
+- Execution of *ChunkGroupResult::all_assets failed
+- Execution of PageEndpoint::client_chunk_group failed
+- Execution of PageEndpoint::client_evaluatable_assets failed
+- content is not available as task execution failed
+- Execution of PageEndpoint::client_module failed
+- content is not available as task execution failed
+- Execution of *create_page_loader_entry_module failed
+- Execution of PagesProject::client_module_context failed
+- Execution of *ModuleAssetContext::new failed
+- Execution of get_client_module_options_context failed
+- Execution of *get_jsx_transform_options failed
+- Execution of get_client_resolve_options_context failed
+- Failed to restore task data (corrupted database or bug): Meta for get_next_client_import_map (TaskId 90108))
+  
+  Caused by:
+      0: Looking up data for TaskId 90108 from database failed
+      1: Unable to open static sorted file referenced from 00000040.meta
+      2: Unable to open static sorted file 00000035.sst
+      3: The system cannot find the path specified. (os error 3)

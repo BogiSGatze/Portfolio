@@ -1,0 +1,88 @@
+.gridCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.desktopContainer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #1a1510;
+}
+
+.desktopContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(30, 25, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 119, 101, 0.2);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #c4a882;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.backButton {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: 1px solid rgba(139, 119, 101, 0.4);
+  border-radius: 4px;
+  color: #c4a882;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(139, 119, 101, 0.2);
+    border-color: rgba(139, 119, 101, 0.6);
+  }
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeText {
+  font-family: 'Courier New', monospace;
+  font-size: 3rem;
+  color: #c4a882;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  opacity: 0.6;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
