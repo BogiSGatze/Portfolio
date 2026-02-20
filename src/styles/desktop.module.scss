@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&family=Courier+Prime:wght@400;700&display=swap');
+
+$bg: #1a1208;
+$brown: #3d2b0e;
+$gold: #c9a96e;
+$gold-dim: #7a5e35;
+$gold-bright: #e8c87a;
+$green: #39ff7a;
+$scanline: rgba(0,0,0,0.35);
+
+.desktop {
+  background: $bg;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Share Tech Mono', monospace;
+  cursor: default;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, $scanline 2px, $scanline 4px);
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  &::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.85) 100%);
+    pointer-events: none;
+    z-index: 999;
+  }
+}
+
+.terrain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+@keyframes flicker {
+  0% { opacity: 0; }
+  10% { opacity: 0.9; }
+  12% { opacity: 0.3; }
+  14% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  border-bottom: 1px solid $gold-dim;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  background: rgba(20, 12, 4, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+.sysLabel {
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  color: $gold;
+  letter-spacing: 3px;
+}
+
+.clock {
+  font-size: 13px;
+  color: $gold-dim;
+  letter-spacing: 2px;
+}
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'VT323', monospace;
+  font-size: clamp(28px, 5vw, 52px);
+  color: $gold;
+  letter-spacing: 18px;
+  text-align: center;
+  opacity: 0.12;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 6, 2, 0.93);
+  border: 1px solid $gold-dim;
+  backdrop-filter: blur(8px);
+  user-select: none;
+  animation: slideUp 0.6s 0.4s ease both;
+  min-width: 160px;
+  min-height: 80px;
+}
+
+.widgetTitlebar {
+  background: $brown;
+  border-bottom: 1px solid $gold-dim;
+  padding: calc(5px * var(--window-scale, 1)) calc(10px * var(--window-scale, 1));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: grab;
+
+  &:active { cursor: grabbing; }
+
+  span {
+    font-size: calc(11px * var(--window-scale, 1));
+    color: $gold;
+    letter-spacing: calc(2px * var(--window-scale, 1));
+  }
+}
+
+.winBtns {
+  display: flex;
+  gap: calc(5px * var(--window-scale, 1));
+}
+
+.winBtn {
+  width: calc(10px * var(--window-scale, 1));
+  height: calc(10px * var(--window-scale, 1));
+  border: calc(1px * var(--window-scale, 1)) solid $gold-dim;
+  background: transparent;
+  cursor: pointer;
+
+  &:hover { background: rgba(255,80,80,0.5); border-color: rgba(255,80,80,0.5); }
+}
+
+// Cassette
+.cassetteWidget {
+  bottom: 60px;
+  left: 28px;
+  width: 220px;
+}
+
+.cassetteBody {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cassetteSvg {
+  width: 140px;
+  filter: drop-shadow(0 0 8px rgba(201,169,110,0.3));
+}
+
+@keyframes spinReel {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.reelLeft {
+  transform-origin: center;
+  animation: spinReel 2s linear infinite;
+}
+
+.reelRight {
+  transform-origin: center;
+  animation: spinReel 2.2s linear infinite;
+}
+
+.marqueeWrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marqueeText {
+  display: inline-block;
+  animation: marquee 12s linear infinite;
+  font-size: 10px;
+  color: $gold-dim;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.songTitle {
+  font-size: 11px;
+  color: $gold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.cassetteControls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.ctrlBtn {
+  background: none;
+  border: 1px solid $gold-dim;
+  color: $gold;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.15s;
+
+  &:hover {
+    background: $gold-dim;
+    color: $bg;
+  }
+}
+
+// Terminal
+.terminalWindow {
+  top: 80px;
+  left: 50%;
+  transform: translateX(-55%);
+  width: 400px;
+  animation: slideUp 0.6s 0.2s ease both;
+}
+
+.terminalBody {
+  padding: 14px 16px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(12px * var(--window-scale, 1));
+  line-height: 1.8;
+  color: $green;
+  overflow: hidden;
+}
+
+.tLine {
+  display: flex;
+  gap: 8px;
+  animation: typeIn 0.3s ease both;
+
+  @for $i from 1 through 9 {
+    &:nth-child(#{$i}) { animation-delay: #{0.5 + $i * 0.3}s; }
+  }
+}
+
+.tPrompt { color: $gold-dim; }
+.tCmd { color: $gold; }
+.tOut { color: rgba(57,255,122,0.7); padding-left: 16px; }
+.tComment { color: $gold-dim; opacity: 0.6; padding-left: 16px; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 13px;
+  background: $green;
+  vertical-align: middle;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes typeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* resize handle (bottom-right) */
+.resizeHandle {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: 24px;
+  height: 24px;
+  cursor: se-resize;
+  z-index: 120;
+  opacity: 0.95;
+  background: transparent; /* larger hit area */
+}
+.resizeHandle::before {
+  content: '';
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 12px;
+  height: 12px;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 4px);
+  transform: rotate(45deg);
+  border-radius: 2px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));
+  pointer-events: none;
+}
+
+// Folder
+.folderWidget {
+  top: 90px;
+  right: 40px;
+  width: 200px;
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+}
+
+.folderIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 12px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: $gold-dim;
+    background: rgba(201,169,110,0.05);
+  }
+}
+
+.folderSvg {
+  width: 80px;
+  filter: drop-shadow(0 0 10px rgba(201,169,110,0.25));
+  transition: filter 0.2s, transform 0.2s;
+
+  .folderIcon:hover & {
+    filter: drop-shadow(0 0 18px rgba(201,169,110,0.6));
+    transform: scale(1.05);
+  }
+}
+
+.folderLabel {
+  font-size: 11px;
+  color: $gold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.folderHoverLabel {
+  font-size: 9px;
+  color: $gold-dim;
+  letter-spacing: 1px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  .folderIcon:hover & { opacity: 1; }
+}
+
+.folderPanel {
+  background: rgba(8,5,2,0.95);
+  border: 1px solid $gold-dim;
+  padding: 10px;
+  margin-top: 4px;
+}
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 11px;
+  color: $gold-dim;
+  letter-spacing: 1px;
+  transition: color 0.15s, background 0.15s;
+  border-bottom: 1px solid rgba(201,169,110,0.08);
+
+  &:last-child { border-bottom: none; }
+  &:hover {
+    color: $gold-bright;
+    background: rgba(201,169,110,0.07);
+  }
+}
+
+// Bio Window
+.bioWindow {
+  top: 80px;
+  right: 260px;
+  width: 330px;
+}
+
+.bioBody {
+  padding: calc(16px * var(--window-scale, 1));
+} 
+
+.bioHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: calc(12px * var(--window-scale, 1));
+  margin-bottom: calc(14px * var(--window-scale, 1));
+  padding-bottom: calc(12px * var(--window-scale, 1));
+  border-bottom: 1px solid rgba(201,169,110,0.2);
+} 
+
+.bioAvatar {
+  width: calc(52px * var(--window-scale, 1));
+  height: calc(52px * var(--window-scale, 1));
+  flex-shrink: 0;
+  border: 1px solid $gold-dim;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'VT323', monospace;
+  font-size: calc(30px * var(--window-scale, 1));
+  color: $gold;
+  background: $brown;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: calc(3px * var(--window-scale, 1));
+    border: 1px solid rgba(201,169,110,0.2);
+  }
+} 
+
+.bioName {
+  font-family: 'VT323', monospace;
+  font-size: calc(28px * var(--window-scale, 1));
+  color: $gold-bright;
+  letter-spacing: calc(3px * var(--window-scale, 1));
+  line-height: 1;
+} 
+
+.bioTitle {
+  font-size: calc(10px * var(--window-scale, 1));
+  color: $gold-dim;
+  letter-spacing: calc(1.5px * var(--window-scale, 1));
+  margin-top: calc(3px * var(--window-scale, 1));
+} 
+
+.bioLocation {
+  font-size: calc(9px * var(--window-scale, 1));
+  color: $gold-dim;
+  opacity: 0.7;
+  letter-spacing: calc(1px * var(--window-scale, 1));
+  margin-top: calc(4px * var(--window-scale, 1));
+} 
+
+.bioStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(6px * var(--window-scale, 1));
+  margin-bottom: calc(14px * var(--window-scale, 1));
+} 
+
+.statItem {
+  background: rgba(201,169,110,0.04);
+  border: 1px solid rgba(201,169,110,0.15);
+  padding: calc(6px * var(--window-scale, 1)) calc(8px * var(--window-scale, 1));
+} 
+
+.statLabel {
+  font-size: calc(8px * var(--window-scale, 1));
+  color: $gold-dim;
+  letter-spacing: calc(1px * var(--window-scale, 1));
+}
+
+.statValue {
+  font-size: calc(13px * var(--window-scale, 1));
+  color: $gold;
+  letter-spacing: calc(1px * var(--window-scale, 1));
+  margin-top: calc(2px * var(--window-scale, 1));
+  font-family: 'VT323', monospace;
+} 
+
+.bioSectionTitle {
+  font-size: calc(9px * var(--window-scale, 1));
+  color: $gold-dim;
+  letter-spacing: calc(2px * var(--window-scale, 1));
+  margin-bottom: calc(8px * var(--window-scale, 1));
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+  padding-bottom: calc(4px * var(--window-scale, 1));
+} 
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(5px * var(--window-scale, 1));
+  margin-bottom: calc(14px * var(--window-scale, 1));
+}
+
+.skillTag {
+  font-size: calc(9px * var(--window-scale, 1));
+  letter-spacing: calc(1px * var(--window-scale, 1));
+  padding: calc(3px * var(--window-scale, 1)) calc(8px * var(--window-scale, 1));
+  border: 1px solid $gold-dim;
+  color: $gold-dim;
+  transition: all 0.15s;
+  cursor: default;
+
+  &:hover {
+    color: $gold-bright;
+    border-color: $gold-bright;
+    background: rgba(201,169,110,0.08);
+  }
+
+  &.hot {
+    border-color: rgba(255,160,80,0.6);
+    color: rgba(255,190,100,0.9);
+  }
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  gap: calc(5px * var(--window-scale, 1));
+}
+
+.hobbyItem {
+  font-size: calc(10px * var(--window-scale, 1));
+  color: $gold-dim;
+  letter-spacing: calc(1px * var(--window-scale, 1));
+  display: flex;
+  align-items: center;
+  gap: calc(8px * var(--window-scale, 1));
+}
+
+.hobbyIcon {
+  color: $gold;
+  font-size: calc(13px * var(--window-scale, 1));
+  width: calc(18px * var(--window-scale, 1));
+  text-align: center;
+}
+
+// Game Picker
+.gameWindow {
+  bottom: 60px;
+  right: 28px;
+  width: 590px;
+}
+
+.gameLayout {
+  display: flex;
+}
+
+.gameGridPanel {
+  padding: 12px;
+  flex: 1 1 240px; /* allow the left column to grow/shrink with the window */
+  min-width: 180px;
+}
+
+.pickLabel {
+  font-size: 9px;
+  color: $gold-dim;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(78px, 1fr));
+  gap: 8px;
+}
+
+.gameCell {
+  min-width: 78px;
+  min-height: 78px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(201,169,110,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.15s, background 0.15s;
+  background: rgba(5,3,1,0.6);
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px;
+
+  &:hover {
+    border-color: $gold-dim;
+    background: rgba(201,169,110,0.07);
+  }
+
+  &.selected {
+    border-color: $gold-bright;
+    background: rgba(201,169,110,0.15);
+    box-shadow: inset 0 0 12px rgba(201,169,110,0.1);
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 2px solid $gold-bright;
+      pointer-events: none;
+    }
+
+    .gameCellLabel { color: $gold; }
+  }
+}
+
+.cellEmoji {
+  font-size: calc(28px * var(--window-scale, 1));
+  line-height: 1;
+}
+
+/* icon image that replaces emoji when available */
+.cellIcon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: inline-block;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.55));
+}
+
+/* large icon used in the detail panel when a game has an image */
+.gdIcon {
+  width: clamp(80px, 28%, 160px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 6px auto;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.5));
+}
+
+.gameCellLabel {
+  font-size: calc(8px * var(--window-scale, 1));
+  color: $gold-dim;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 3px;
+}
+
+.gameDetailPanel {
+  border-left: 1px solid $gold-dim;
+  flex: 1;
+  padding: 16px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.gdTitle {
+  font-family: 'VT323', monospace;
+  font-size: calc(24px * var(--window-scale, 1));
+  color: $gold-bright;
+  letter-spacing: 3px;
+  margin-bottom: 2px;
+}
+
+.gdGenre { font-size: calc(9px * var(--window-scale, 1)); }
+.gdStatValue { font-size: calc(12px * var(--window-scale, 1)); }
+
+.gdGenre {
+  font-size: 9px;
+  color: $gold-dim;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.gdEmojiDisplay {
+  font-size: 64px;
+  text-align: center;
+  margin: 8px 0;
+  line-height: 1;
+  filter: drop-shadow(0 0 16px rgba(201,169,110,0.4));
+}
+
+.gdDesc {
+  font-size: calc(10px * var(--window-scale, 1));
+  color: $gold-dim;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  flex: 1;
+}
+
+.gdStatsRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.gdStat {
+  flex: 1;
+  background: rgba(201,169,110,0.05);
+  border: 1px solid rgba(201,169,110,0.15);
+  padding: 5px 8px;
+}
+
+.gdStatLabel {
+  font-size: 8px;
+  color: $gold-dim;
+  letter-spacing: 1px;
+}
+
+.gdStatValue {
+  font-size: 13px;
+  color: $gold;
+  font-family: 'VT323', monospace;
+  letter-spacing: 1px;
+}
+
+.bogiRating {
+  display: flex;
+  gap: 2px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.bogiRatingLabel {
+  font-size: 9px;
+  color: $gold-dim;
+  letter-spacing: 1px;
+  margin-right: 4px;
+}
+
+.star {
+  font-size: 14px;
+  color: rgba(201,169,110,0.2);
+
+  &.lit {
+    color: $gold-bright;
+    text-shadow: 0 0 6px rgba(232,200,122,0.6);
+  }
+}
+
+// Taskbar
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: rgba(10,6,2,0.95);
+  border-top: 1px solid $gold-dim;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 4px;
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.startBtn {
+  background: $brown;
+  border: 1px solid $gold-dim;
+  color: $gold;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+  padding: 4px 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+
+  &:hover {
+    background: $gold-dim;
+    color: $bg;
+  }
+}
+
+.taskbarSep {
+  width: 1px;
+  height: 30px;
+  background: $gold-dim;
+  opacity: 0.3;
+  margin: 0 6px;
+  flex-shrink: 0;
+}
+
+.taskbarItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  color: $gold-dim;
+  font-size: 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+
+  &.active {
+    border-color: $gold-dim;
+    background: rgba(201,169,110,0.08);
+    color: $gold;
+  }
+
+  &:hover {
+    border-color: $gold-dim;
+    color: $gold;
+  }
+}
+
+.taskbarRight {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.tbIcon {
+  font-size: 14px;
+  cursor: pointer;
+  color: $gold-dim;
+  transition: color 0.15s;
+
+  &:hover { color: $gold; }
+}
+
+.tbClock {
+  font-size: 12px;
+  color: $gold-dim;
+  letter-spacing: 1px;
+  border-left: 1px solid $gold-dim;
+  padding-left: 12px;
+  opacity: 0.6;
+}
+
+.tooltip {
+  position: relative;
+
+  &:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $brown;
+    border: 1px solid $gold-dim;
+    color: $gold;
+    font-size: 10px;
+    padding: 3px 8px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    pointer-events: none;
+    z-index: 200;
+  }
+}
