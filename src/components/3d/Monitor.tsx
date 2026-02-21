@@ -1,3 +1,7 @@
+/**
+ * @deprecated This component is unused — ModelMonitor.tsx loads the FBX model instead.
+ * Safe to delete if no longer needed.
+ */
 'use client';
 
 import { useRef, useMemo } from 'react';

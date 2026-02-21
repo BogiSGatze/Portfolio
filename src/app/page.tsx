@@ -1,4 +1,11 @@
 'use client';
+/**
+ * Landing page — the 3D CRT monitor intro.
+ *
+ * Displays a retro header, an instruction overlay, and a Three.js scene
+ * (loaded dynamically to avoid SSR issues). When the user "powers on"
+ * the monitor, a flash transition navigates to `/desktop`.
+ */
 
 import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';

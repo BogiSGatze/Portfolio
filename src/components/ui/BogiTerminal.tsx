@@ -1,3 +1,7 @@
+/**
+ * @deprecated This standalone terminal component is unused since the desktop page
+ * now uses an inline React-state-based terminal. Safe to delete if no longer needed.
+ */
 'use client';
 
 import { useEffect, useRef } from 'react';

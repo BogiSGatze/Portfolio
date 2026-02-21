@@ -1,3 +1,12 @@
+/**
+ * Global state store for the 3D computer / landing page.
+ *
+ * Manages:
+ * - Power state (isPowered) — controls whether the monitor is "on"
+ * - Screen glow intensity — affects the CRT bloom effect
+ * - Float offset — vertical hover animation value
+ * - On-screen avatar — the bouncing Bogi PNG that can be toggled via terminal
+ */
 import { create } from 'zustand';
 
 interface ComputerState {

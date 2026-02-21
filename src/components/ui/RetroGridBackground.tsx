@@ -1,3 +1,7 @@
+/**
+ * @deprecated This component is not imported anywhere. Safe to delete along with
+ * retro-grid.module.scss if no longer needed.
+ */
 'use client';
 
 import { useEffect, useRef } from 'react';

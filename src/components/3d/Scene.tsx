@@ -1,4 +1,11 @@
 'use client';
+/**
+ * 3D scene for the landing page.
+ *
+ * Contains the CRT monitor model (Computer component), a starfield backdrop,
+ * orbiting camera controls, and the ScreenPrompt overlay that appears when
+ * the computer is powered on.
+ */
 
 import { useRef, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
