@@ -1,0 +1,62 @@
+/* ── NEOBRUTALIST WINDOW SYSTEM ──
+   Shared .nbwin frame used by all draggable desktop windows */
+
+.nbwin {
+  position:absolute;
+  background:var(--pink);
+  border:4px solid var(--black);
+  box-shadow: var(--shadow-b);
+  user-select:none;
+  transition: box-shadow 0.12s, transform 0.08s;
+  resize:both;
+  overflow:auto;
+  min-width:120px;
+  min-height:80px;
+  --ws:1;
+}
+.nbwin > *:not(.nbwin-bar) { font-size: calc(1em * var(--ws)); }
+.nbwin:hover { box-shadow:12px 12px 0px var(--black); }
+.nbwin.yellow  { background:var(--yellow); }
+.nbwin.cyan    { background:var(--cyan); }
+.nbwin.mint    { background:var(--mint); }
+.nbwin.lavender{ background:var(--lavender); }
+.nbwin.white   { background:#f5f0ff; }
+.nbwin.purple  { background:var(--purple); }
+
+.nbwin-bar {
+  background:var(--black);
+  padding:8px 12px;
+  display:flex; align-items:center; justify-content:space-between;
+  cursor:grab; min-height:36px; border-bottom:2px solid rgba(255,255,255,0.02);
+}
+.nbwin-bar:active { cursor:grabbing; }
+.nbwin-title {
+  font-family:'Press Start 2P', monospace;
+  font-size:12px; color:var(--white);
+  letter-spacing:1px;
+}
+.nbwin-btns { display:flex; gap:5px; }
+.nbwin-btn {
+  width:16px; height:16px;
+  border:2px solid var(--white);
+  background:transparent; cursor:pointer;
+  font-size:10px; color:var(--white);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Press Start 2P',monospace;
+  transition:all 0.1s; line-height:1;
+}
+.nbwin-btn:hover { background:var(--white); color:var(--black); }
+
+.nbwin-body { padding:14px; color:var(--black); font-size:13px; }
+
+.resizeHandle {
+  position:absolute; right:8px; bottom:8px; width:14px; height:14px;
+  background:var(--white); border:3px solid var(--black);
+  box-shadow:3px 3px 0 var(--black); cursor:nwse-resize; transform:rotate(45deg);
+}
+
+/* generic windows open / close */
+#projects-win,#cv-files-win,#gallery-win { display:none; }
+#projects-win.open,#cv-files-win.open,#gallery-win.open { display:block; animation:winPopSimple 0.25s ease both; }
+
+@keyframes winPopSimple { from{opacity:0;transform:scale(0.92)} to{opacity:1;transform:scale(1)} }

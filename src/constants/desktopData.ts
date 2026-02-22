@@ -41,6 +41,13 @@ export interface CvFile {
   path: string;
 }
 
+/** A single image in the standalone gallery */
+export interface GalleryImage {
+  src: string;
+  title: string;
+  description: string;
+}
+
 /** A single line in the terminal output */
 export interface TerminalLine {
   type: 'in' | 'out' | 'sys' | 'err';
@@ -186,3 +193,32 @@ export const HOBBIES = [
   'Movies \u2014 always watching something new',
   'Gaming \u2014 see Games.exe for the full list',
 ] as const;
+
+/** Gallery images displayed in the Gallery window */
+export const GALLERY_IMAGES: GalleryImage[] = [
+  {
+    src: '/projects/background.png',
+    title: 'Vaporwave Desktop',
+    description: 'The vaporwave-themed desktop environment with neobrutalist windows and retro aesthetics.',
+  },
+  {
+    src: '/projects/debateduel1.png',
+    title: 'Debate Duel \u2014 Home',
+    description: 'The landing page of Debate Duel, a platform for hosting and joining online debates.',
+  },
+  {
+    src: '/projects/debateduel2.png',
+    title: 'Debate Duel \u2014 Arena',
+    description: 'The debate arena where users present arguments and vote for the most convincing side.',
+  },
+  {
+    src: '/projects/diablo.png',
+    title: 'Diablo IV',
+    description: 'Dark, gothic, and ruthless \u2014 hours lost in Sanctuary chasing gear that gets replaced next season.',
+  },
+  {
+    src: '/projects/chain loss.png',
+    title: 'Chain Loss',
+    description: 'An experimental visual piece exploring links and disconnection.',
+  },
+];
