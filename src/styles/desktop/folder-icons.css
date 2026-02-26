@@ -1,0 +1,55 @@
+/* ── FOLDER ICONS ── */
+.folder-icon {
+  position:absolute;
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  cursor:pointer; padding:8px; width:88px;
+  border:2px solid transparent; transition:all 0.15s;
+}
+.folder-icon:hover { border-color:rgba(255,255,255,0.3); background:rgba(255,255,255,0.06); }
+.folder-icon.selected { border-color:var(--cyan); background:rgba(0,229,255,0.1); }
+
+.folder-img {
+  width:52px; height:44px;
+  position:relative;
+}
+.folder-body {
+  width:52px; height:38px;
+  background:var(--yellow); border:2px solid var(--black);
+  box-shadow:3px 3px 0 var(--black);
+  position:absolute; bottom:0; left:0;
+  display:flex; align-items:center; justify-content:center;
+}
+.folder-tab {
+  width:20px; height:8px;
+  background:var(--yellow); border:2px solid var(--black);
+  border-bottom:none;
+  position:absolute; top:0; left:2px;
+}
+.folder-body.pink { background:var(--pink); }
+.folder-tab.pink  { background:var(--pink); }
+.folder-body.cyan { background:var(--cyan); }
+.folder-tab.cyan  { background:var(--cyan); }
+.folder-body.mint { background:var(--mint); }
+.folder-tab.mint  { background:var(--mint); }
+.folder-body.lav  { background:var(--lavender); }
+.folder-tab.lav   { background:var(--lavender); }
+.folder-body.purple { background:var(--purple); }
+.folder-tab.purple  { background:var(--purple); }
+
+.folder-label {
+  font-family:'Press Start 2P',monospace; font-size:9px;
+  color:var(--white); text-align:center; line-height:1.5;
+  text-shadow:1px 1px 0 var(--black);
+}
+
+/* ── GAME ICON ON DESKTOP ── */
+#game-icon {
+  position:absolute; bottom:66px; right:180px;
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  cursor:pointer; padding:8px;
+  border:2px solid transparent; transition:all 0.15s;
+  z-index:10;
+}
+#game-icon:hover { border-color:var(--pink); background:rgba(255,45,155,0.1); }
+.game-icon-img { font-size:42px; filter:drop-shadow(3px 3px 0 var(--black)); }
+.game-icon-lbl { font-family:'Press Start 2P',monospace; font-size:9px; color:var(--white); text-shadow:1px 1px 0 var(--black); text-align:center; }

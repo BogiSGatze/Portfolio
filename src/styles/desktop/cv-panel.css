@@ -1,0 +1,64 @@
+/* ── AVATAR MINI CARD ── */
+#avatar-card {
+  position:absolute; top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  z-index:15;
+  cursor:pointer;
+}
+#avatar-mini {
+  background:var(--yellow); border:3px solid var(--black);
+  box-shadow:var(--shadow-b); padding:10px 14px;
+  display:flex; align-items:center; gap:10px;
+  transition:all 0.2s; white-space:nowrap;
+}
+#avatar-mini:hover { transform:translate(-2px,-2px); box-shadow:8px 8px 0 var(--black); }
+.av-portrait {
+  width:40px; height:40px; background:var(--pink);
+  border:2px solid var(--black); display:flex; align-items:center;
+  justify-content:center; flex-shrink:0;
+  box-shadow:3px 3px 0 var(--black);
+  overflow:hidden;
+}
+.av-portrait img { width:100%; height:100%; object-fit:cover; display:block; image-rendering:auto; }
+.av-name { font-family:'Press Start 2P',monospace; font-size:11px; color:var(--black); letter-spacing:1px; font-weight:bold; }
+.av-title { font-size:11px; color:rgba(0,0,0,0.6); margin-top:3px; font-style:italic; }
+.av-hint { font-size:8px; color:var(--black); opacity:0.5; margin-top:2px; font-family:'Press Start 2P',monospace; }
+
+/* ── CV FULL PANEL ── */
+#cv-panel {
+  display:none; position:absolute;
+  top:220px; left:50%; transform:translateX(-50%);
+  width:640px; z-index:18; border-width:4px;
+}
+#cv-panel.open { display:block; animation:winPop 0.25s ease both; }
+@keyframes winPop { from{opacity:0;transform:translateX(-50%) scale(0.92)} to{opacity:1;transform:translateX(-50%) scale(1)} }
+
+.cv-body { padding:22px 26px; }
+.cv-header { display:flex; gap:14px; align-items:center; margin-bottom:16px; padding-bottom:14px; border-bottom:3px solid var(--black); }
+.cv-portrait { width:90px; height:90px; background:var(--pink); border:4px solid var(--black); display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow-b); flex-shrink:0; overflow:hidden; }
+.cv-portrait img { width:100%; height:100%; object-fit:cover; display:block; image-rendering:auto; }
+.cv-name { font-family:'Press Start 2P',monospace; font-size:18px !important; color:var(--black) !important; letter-spacing:1px; font-weight:bold; }
+.cv-role { font-size:13px; color:rgba(0,0,0,0.7); margin-top:5px; font-style:italic; font-weight:700; }
+.cv-loc  { font-size:12px; color:rgba(0,0,0,0.55); margin-top:3px; }
+
+.cv-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:14px; }
+.cv-stat { background:white; border:3px solid var(--black); padding:12px 14px; box-shadow:4px 4px 0 var(--black); }
+.cv-stat-label { font-family:'Press Start 2P',monospace; font-size:10px; color:var(--black); letter-spacing:1px; margin-bottom:6px; font-weight:700; }
+.cv-stat-val { font-family:'Press Start 2P',monospace; font-size:14px; color:var(--black); font-weight:700; }
+
+.cv-section { font-family:'Press Start 2P',monospace; font-size:11px; color:rgba(0,0,0,0.55); letter-spacing:2px; margin-bottom:8px; border-bottom:2px solid var(--black); padding-bottom:6px; }
+
+.cv-right p { margin-top:0; font-size:15px; color:rgba(0,0,0,0.75); font-weight:700; line-height:1.6; }
+
+.skill-wrap { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:14px; }
+.skill-chip {
+  font-family:'Press Start 2P',monospace; font-size:11px;
+  padding:6px 10px; background:white; border:3px solid var(--black);
+  box-shadow:3px 3px 0 var(--black); cursor:default; color:var(--black);
+  transition:all 0.1s; border-radius:4px;
+}
+.skill-chip:hover { transform:translate(-1px,-1px); box-shadow:4px 4px 0 var(--black); }
+.skill-chip.hot { background:var(--cyan); }
+
+.hobby-list { display:flex; flex-direction:column; gap:6px; }
+.hobby-row { display:flex; align-items:center; gap:8px; font-size:13px; color:rgba(0,0,0,0.7); font-weight:700; }

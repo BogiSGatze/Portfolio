@@ -1,0 +1,31 @@
+/* ── TASKBAR ── */
+#taskbar {
+  position:absolute; bottom:0; left:0; right:0; height:48px;
+  background:rgba(10,8,20,0.97);
+  border-top:3px solid var(--pink);
+  display:flex; align-items:center; padding:0 12px; gap:4px;
+  z-index:200;
+}
+.tb-start {
+  background:var(--cyan); border:2px solid var(--black);
+  color:var(--black); font-family:'Press Start 2P',monospace;
+  font-size:10px; padding:6px 12px; cursor:pointer;
+  box-shadow:var(--shadow); white-space:nowrap;
+  transition:all 0.1s;
+}
+.tb-start:hover { transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--black); }
+
+.tb-sep { width:2px; height:30px; background:rgba(255,255,255,0.15); margin:0 4px; flex-shrink:0; }
+
+.tb-item {
+  display:flex; align-items:center; gap:5px;
+  padding:4px 10px; border:2px solid transparent;
+  color:rgba(255,255,255,0.5); font-size:10px; letter-spacing:1px;
+  cursor:pointer; transition:all 0.1s; white-space:nowrap;
+  font-family:'Press Start 2P',monospace; font-size:9px;
+}
+.tb-item.active { border-color:var(--cyan); background:rgba(0,229,255,0.08); color:var(--cyan); box-shadow:0 4px 0 rgba(0,229,255,0.06) inset; transform:translateY(-1px); }
+.tb-item:hover { color:var(--white); border-color:rgba(255,255,255,0.3); }
+
+.tb-right { margin-left:auto; display:flex; align-items:center; gap:12px; flex-shrink:0; }
+.tb-clock { font-family:'Share Tech Mono',monospace; font-size:15px; color:var(--yellow); border-left:2px solid rgba(255,255,255,0.2); padding-left:12px; }
