@@ -1,0 +1,35 @@
+/* ── GAMES WINDOW ── */
+#games-win { bottom:62px; right:24px; width:720px; display:none; }
+#games-win.open { display:flex; flex-direction:column; animation:winPopSimple 0.25s ease both; }
+
+.games-layout { display:flex; flex:1; min-height:0; }
+.games-grid-side { padding:12px; background:rgba(0,0,0,0.15); border-right:3px solid var(--black); flex-shrink:0; display:flex; flex-direction:column; }
+.games-grid-label { font-family:'Press Start 2P',monospace; font-size:9px; color:var(--black); letter-spacing:1px; margin-bottom:8px; }
+.games-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+
+.game-cell {
+  aspect-ratio:1; min-width:0;
+  background:white; border:3px solid var(--black);
+  box-shadow:4px 4px 0 var(--black);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  cursor:pointer; gap:6px; transition:transform 0.12s, box-shadow 0.12s; padding:6px;
+}
+.game-cell:hover { transform:translate(-2px,-2px); box-shadow:5px 5px 0 var(--black); background:var(--yellow); }
+.game-cell.selected { background:var(--cyan); transform:translate(-2px,-2px); box-shadow:5px 5px 0 var(--black); }
+.gc-emoji { font-size:36px; }
+.gc-label { font-family:'Press Start 2P',monospace; font-size:8px; color:var(--black); text-align:center; padding:0 3px; line-height:1.4; }
+
+.game-detail { flex:1; padding:16px; display:flex; flex-direction:column; min-width:0; background:white; border-left:none; overflow:auto; }
+.gd-title { font-family:'Press Start 2P',monospace; font-size:13px; color:var(--black); letter-spacing:1px; margin-bottom:4px; line-height:1.4; }
+.gd-genre { font-size:11px; color:rgba(0,0,0,0.5); letter-spacing:1px; margin-bottom:10px; font-weight:700; }
+.gd-emoji { font-size:52px; text-align:center; margin:6px 0; display:flex; align-items:center; justify-content:center; }
+@keyframes gamePop { 0%{transform:scale(0.4) rotate(-15deg);opacity:0} 70%{transform:scale(1.1) rotate(2deg)} 100%{transform:scale(1) rotate(0);opacity:1} }
+.gd-desc { font-size:12px; color:rgba(0,0,0,0.7); line-height:1.7; flex:1; font-weight:700; }
+.gd-meta { display:flex; gap:6px; margin-top:10px; }
+.gd-meta-box { flex:1; background:var(--yellow); border:2px solid var(--black); padding:5px 8px; box-shadow:2px 2px 0 var(--black); }
+.gd-meta-label { font-family:'Press Start 2P',monospace; font-size:8px; color:rgba(0,0,0,0.5); margin-bottom:2px; }
+.gd-meta-val { font-family:'Press Start 2P',monospace; font-size:9px; color:var(--black); }
+.star-row { display:flex; gap:3px; margin-top:8px; align-items:center; }
+.star-lbl { font-family:'Press Start 2P',monospace; font-size:9px; color:var(--black); margin-right:4px; }
+.star { font-size:14px; color:rgba(0,0,0,0.15); }
+.star.lit { color:var(--pink); }

@@ -1,0 +1,128 @@
+/* ── MAP WINDOW (Uiverse.io by SnyDeTreves) ── */
+#map-win { top:56px; right:24px; width:380px; resize:none; overflow:hidden; }
+
+.map-container {
+  --city-radius: 2rem;
+  --city-sign-color-back: var(--pink);
+  --city-sign-color-font: #000;
+  --city-pin-size-font: 1.2rem;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+  line-height: 1;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+.map-background {
+  border-radius: inherit;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.map-cities { width: 100%; }
+.map-city {
+  border-radius: var(--city-radius);
+  left: calc(var(--x) * 1% - var(--city-radius));
+  padding: var(--city-radius);
+  position: absolute;
+  top: calc(var(--y) * 1% - var(--city-radius));
+}
+.map-city::after,
+.map-city::before {
+  font-size: var(--city-pin-size-font);
+}
+.map-city::before {
+  content: '\2022';
+  left: calc(-50% + var(--city-radius));
+  position: absolute;
+  top: calc(-0.65em + var(--city-radius));
+  text-align: center;
+  text-shadow: 0 1px 1px #000;
+  width: 100%;
+}
+.map-city::after {
+  clip-path: inset(-0.5em 0 0 0);
+  content: '\1F4CD';
+  left: calc(-50% + var(--city-radius));
+  position: absolute;
+  top: calc(-1em + var(--city-radius));
+  text-align: center;
+  transition: all 300ms ease-out;
+  width: 100%;
+  z-index: var(--y);
+}
+
+/* ── PIN LABEL / TOOLTIP ── */
+.map-city__label {
+  display: none;
+  left: calc(-6em + 50%);
+  position: absolute;
+  text-align: center;
+  width: 12em;
+  z-index: 999;
+}
+.map-city__sign {
+  align-items: center;
+  background-color: var(--city-sign-color-back);
+  border-radius: 0.2rem;
+  border: 0.15em solid var(--city-sign-color-font);
+  box-shadow: 0 0 3px #000;
+  color: var(--city-sign-color-font);
+  column-gap: 0.3em;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: visible;
+  padding: 0.5em 0.6em;
+  white-space: normal;
+  word-break: break-word;
+  width: max-content;
+  max-width: 12em;
+  min-height: 3em;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+}
+.map-city__sign::before {
+  content: attr(data-icon);
+  font-size: 1.4em;
+  margin-bottom: 0.2em;
+}
+.map-city:hover::after {
+  clip-path: inset(-0.5em 0 0.5em 0);
+  transform: translateY(0.5em);
+}
+.map-city:hover .map-city__label {
+  animation: map-fadein 300ms forwards ease-out;
+  display: block;
+}
+.map-city:hover .map-city__sign.anim::before {
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+.map-city:hover .map-city__sign.anim-grow::before {
+  animation-name: map-grow;
+  animation-timing-function: ease-in;
+}
+.map-city:hover .map-city__sign.anim-slidein::before {
+  animation-name: map-slidein;
+  animation-timing-function: ease-out;
+}
+@keyframes map-fadein {
+  0% { opacity:0; top:calc(var(--city-radius)); }
+  100% { opacity:1; top:calc(var(--city-radius) + var(--city-pin-size-font)/2); }
+}
+@keyframes map-grow {
+  0%{transform:translate(0,200%)} 10%{transform:translate(5%,180%)} 20%{transform:translate(-10%,160%)}
+  30%{transform:translate(15%,140%)} 40%{transform:translate(-5%,120%)} 50%{transform:translate(10%,100%)}
+  60%{transform:translate(-15%,80%)} 70%{transform:translate(5%,60%)} 80%{transform:translate(0,40%)}
+  90%{transform:translate(0,20%)} 100%{transform:translate(0,0)}
+}
+@keyframes map-slidein {
+  0%{transform:translateX(-200%)} 100%{transform:translateX(0)}
+}

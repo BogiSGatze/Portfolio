@@ -1,0 +1,117 @@
+/* ── CASSETTE TAPE (Uiverse.io by Praashoo7) ── */
+#cassette-desk {
+  position:absolute;
+  bottom:66px; left:24px;
+  z-index:10;
+}
+.tape-card {
+  width:300px; height:200px;
+  background:#252525;
+  border-radius:8px;
+  box-shadow: rgba(0,0,0,0.4) 0px 2px 4px, rgba(0,0,0,0.3) 0px 7px 13px -3px, rgba(0,0,0,0.2) 0px -3px 0px inset;
+}
+.tape-ups, .tape-downs { display:flex; }
+.tape-screw {
+  display:flex;
+  color:black; border:1px solid black;
+  background-color:lightgrey;
+  height:0.75em; width:0.75em;
+  border-radius:50%;
+  align-items:center; justify-content:center;
+  font-size:10px; line-height:1;
+}
+.tape-screw-tl { margin:0.5em; }
+.tape-screw-tr { margin-top:0.5em; margin-left:auto; margin-right:0.5em; }
+.tape-screw-bl { margin-top:-1.3em; margin-left:0.5em; }
+.tape-screw-br { margin-top:-1.3em; margin-left:auto; margin-right:0.5em; }
+.tape-label {
+  width:230px; height:115px;
+  margin-top:0.5em; margin-left:auto; margin-right:auto;
+  background-color:#FFFDD0;
+  clip-path:polygon(5% 0,95% 0,100% 10%,100% 100%,100% 100%,0 100%,0 100%,0 10%);
+  border-radius:5px;
+  position:relative;
+}
+.tape-line {
+  position:relative;
+  width:200px; height:1px;
+  background-color:black;
+  left:0.8em;
+}
+.tape-line-1 { top:1em; }
+.tape-line-2 { top:2em; }
+.tape-yl {
+  display:flex;
+  width:228px; height:50px;
+  background-color:rgb(242,188,0);
+  margin-top:2.5em; margin-left:0.06em;
+}
+.tape-roll {
+  width:8em; height:2em;
+  margin-left:3em;
+  border-radius:15px;
+  background-color:#171717;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.35em;
+}
+.tape-ribbon {
+  width:3em; height:1.5em;
+  position:relative; left:0;
+  background-color:#252525;
+}
+.tape-s-wheel,
+.tape-e-wheel {
+  display:flex; align-items:center; justify-content:center;
+  position:relative;
+  width:1.55em; height:1.55em;
+  border:2px dashed #fff;
+  box-shadow:0 0 0 4.4px #fff;
+  border-radius:50%;
+  animation:tape-spin 2s infinite linear;
+}
+.tape-s-wheel { top:0; left:0; }
+.tape-window { background-color:white; width:auto; height:1.5em; }
+.tape-e-wheel { top:0; left:0; }
+.tape-num { margin-left:1.5em; align-self:center; color:var(--black); font-weight:700; }
+.tape-or {
+  display:flex;
+  width:230px; height:18px;
+  background-color:rgb(241,90,37);
+  margin-top:0.4em; margin-left:auto; margin-right:auto;
+  border-bottom-left-radius:4px; border-bottom-right-radius:4px;
+  align-items:center; justify-content:center;
+}
+.tape-time { font-size:0.5em; color:white; }
+.tape-card2-main { filter:drop-shadow(4px 4px 14px rgba(0,0,0,1)); }
+.tape-card2 {
+  width:150px; height:50px;
+  margin-left:auto; margin-right:auto;
+  background-color:#252525;
+  clip-path:polygon(10% 0%,90% 0%,100% 100%,0% 100%);
+  position:relative;
+}
+.tape-card2 .c1 { position:absolute; width:0.5em; height:0.5em; background-color:rgb(190,190,190); border-radius:50%; left:1.5em; top:2em; }
+.tape-card2 .t1 { position:absolute; width:0.5em; height:0.5em; background-color:rgb(190,190,190); border-radius:2px; left:3em; top:1em; }
+.tape-card2 .screw5 {
+  position:absolute;
+  display:flex; color:black; border:1px solid black;
+  background-color:lightgrey;
+  height:0.75em; width:0.75em;
+  left:50%; top:0.8em;
+  transform:translateX(-50%);
+  border-radius:50%; align-items:center; justify-content:center;
+  font-size:10px; line-height:1;
+}
+.tape-card2 .t2 { position:absolute; width:0.5em; height:0.5em; background-color:rgb(190,190,190); border-radius:2px; left:5.7em; top:1.5em; }
+.tape-card2 .c2 { position:absolute; width:0.5em; height:0.5em; background-color:rgb(190,190,190); border-radius:50%; left:7.2em; top:2em; }
+
+@keyframes tape-spin {
+  100% { transform:rotate(360deg); }
+}
+
+/* Spotify player under cassette */
+.spotify-under-cass {
+  margin-top: 8px;
+}
