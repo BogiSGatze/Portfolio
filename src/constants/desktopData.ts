@@ -229,28 +229,28 @@ export const HOBBIES = [
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     src: '/projects/background.png',
-    title: 'Vaporwave Desktop',
-    description: 'The vaporwave-themed desktop environment with neobrutalist windows and retro aesthetics.',
-  },
-  {
-    src: '/projects/debateduel1.png',
-    title: 'Debate Duel \u2014 Home',
-    description: 'The landing page of Debate Duel, a platform for hosting and joining online debates.',
+    title: 'Determination',
+    description: 'The process of me deciding a prtfolio should involve a lot of trial and error, so here is a picture of me manually removing the background of our dear Pengu, who you can see in his full glory inside the Games.exe',
   },
   {
     src: '/projects/debateduel2.png',
-    title: 'Debate Duel \u2014 Arena',
-    description: 'The debate arena where users present arguments and vote for the most convincing side.',
+    title: 'Debate Duel \u2014 Home',
+    description: 'The landing page of Debate Duel, a platform for hosting and joining online debates. Because who doesnt love a good debate? This app you can also find in my Projects window. If you like to "argue" with strangers please visit this website:',
+  },
+  {
+    src: '/projects/tape.png',
+    title: 'The Tape of Torture',
+    description: 'The painful process of trying to implement our good old tape animation.',
   },
   {
     src: '/projects/diablo.png',
     title: 'Diablo IV',
-    description: 'Dark, gothic, and ruthless \u2014 hours lost in Sanctuary chasing gear that gets replaced next season.',
+    description: 'Dark, gothic, and ruthless \u2014 hours lost in Sanctuary chasing gear that gets replaced next season. And yes, I did indeed put a picture of my school presesntation in here. I am very proud of it.',
   },
   {
     src: '/projects/chain loss.png',
-    title: 'Chain Loss',
-    description: 'An experimental visual piece exploring links and disconnection.',
+    title: 'Chain Loss - The Truth for many (or just me)',
+    description: 'A lot of times I mentioned how much I love playing TFT, but am I good at it? Well, here is your answer! I do have my good days as well I promise.',
   },
 ];
 /** Training tasks organized by tech stack (Ausbildung) */
