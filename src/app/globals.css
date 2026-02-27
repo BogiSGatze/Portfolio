@@ -11,10 +11,11 @@
 @import '../styles/desktop/map.css';
 @import '../styles/desktop/cv-panel.css';
 @import '../styles/desktop/games.css';
-@import '../styles/desktop/projects.css';
 @import '../styles/desktop/gallery.css';
+@import '../styles/desktop/projects.css';
 @import '../styles/desktop/music-prompt.css';
 @import '../styles/desktop/misc.css';
+@import '../styles/desktop/training.css';
 
 /* ====================================
    BASE THEME & GLOBAL RESETS

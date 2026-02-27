@@ -48,6 +48,7 @@ import {
   MusicPrompt,
   DesktopIcons,
   GitHubWidget,
+  TrainingWindow,
 } from '@/components/desktop';
 
 /* ═══════════════════════════════════════════
@@ -61,6 +62,7 @@ export default function Desktop() {
 
   /* ── State ── */
   const [isShuttingDown, setIsShuttingDown] = useState(false);
+  const [showShutdownFlash, setShowShutdownFlash] = useState(false);
   const [musicPrompt, setMusicPrompt] = useState(true);
   const [musicAutoplay, setMusicAutoplay] = useState(false);
   const [musicNotif, setMusicNotif] = useState<string | null>(null);
@@ -70,9 +72,10 @@ export default function Desktop() {
 
   /* ── Shutdown ── */
   const handleShutdown = useCallback(() => {
+    setShowShutdownFlash(true);
     setIsShuttingDown(true);
     useComputerStore.getState().turnOff();
-    setTimeout(() => router.push('/'), 1300);
+    setTimeout(() => router.push('/'), 1500);
   }, [router]);
 
   /* ── Music prompt handlers ── */
@@ -94,6 +97,37 @@ export default function Desktop() {
     <div id="desktop">
       <VaporwaveBackground />
       {isShuttingDown && <div className="shutdown-overlay" />}
+      
+      {/* Shutdown flash animation */}
+      {showShutdownFlash && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'radial-gradient(circle, #ffffff 0%, #00ff41 50%, #000000 100%)',
+            zIndex: 9999,
+            pointerEvents: 'none',
+            animation: 'shutdown-flash 1.5s ease-out forwards',
+          }}
+        />
+      )}
+      
+      <style jsx global>{`
+        @keyframes shutdown-flash {
+          0% {
+            opacity: 1;
+            transform: scale(3);
+          }
+          50% {
+            opacity: 1;
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(0.1);
+          }
+        }
+      `}</style>
 
       <Topbar time={time} />
 
@@ -113,10 +147,11 @@ export default function Desktop() {
         closeWin={closeWin}
       />
       <GamesWindow closeWin={closeWin} />
-      <ProjectsWindow closeWin={closeWin} bringToFront={bringToFront} />
+      <ProjectsWindow closeWin={closeWin} />
       <CvFilesWindow closeWin={closeWin} bringToFront={bringToFront} />
       <GalleryWindow closeWin={closeWin} bringToFront={bringToFront} />
       <MapWindow closeWin={closeWin} />
+      <TrainingWindow closeWin={closeWin} />
 
       {/* ── Profile ── */}
       <ProfilePanel bringToFront={bringToFront} />

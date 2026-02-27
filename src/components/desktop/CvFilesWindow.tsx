@@ -67,7 +67,7 @@ export default function CvFilesWindow({ closeWin, bringToFront }: CvFilesWindowP
           <div className="nbwin-bar">
             <div className="nbwin-title">&#128196; {CV_FILES[fileIdx].file}</div>
             <div className="nbwin-btns">
-              <div className="nbwin-btn" onClick={() => closeFile(fileIdx)}>&#215;</div>
+              <div className="nbwin-btn" onClick={() => closeFile(fileIdx)} onMouseDown={(e) => e.stopPropagation()}>&#215;</div>
             </div>
           </div>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>

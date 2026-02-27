@@ -16,3 +16,4 @@ export { default as CassetteWidget } from './CassetteWidget';
 export { default as MusicPrompt } from './MusicPrompt';
 export { default as DesktopIcons } from './DesktopIcons';
 export { default as GitHubWidget } from './GitHubWidget';
+export { default as TrainingWindow } from './TrainingWindow';

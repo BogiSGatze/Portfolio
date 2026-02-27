@@ -13,14 +13,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 10px;
+  padding: 10px 14px;
   font-family: 'Press Start 2P', monospace;
-  font-size: 8px;
+  font-size: 14px;
   color: var(--purple);
   border-bottom: 1px solid rgba(178, 79, 255, 0.3);
 }
+.github-widget-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.github-widget-contributions {
+  font-size: 9px;
+  color: var(--white);
+  opacity: 0.8;
+}
 .github-widget-link {
-  font-size: 14px;
+  font-size: 18px;
   text-decoration: none;
   transition: transform 0.15s;
 }

@@ -17,7 +17,7 @@
 .game-cell:hover { transform:translate(-2px,-2px); box-shadow:5px 5px 0 var(--black); background:var(--yellow); }
 .game-cell.selected { background:var(--cyan); transform:translate(-2px,-2px); box-shadow:5px 5px 0 var(--black); }
 .gc-emoji { font-size:36px; }
-.gc-label { font-family:'Press Start 2P',monospace; font-size:8px; color:var(--black); text-align:center; padding:0 3px; line-height:1.4; }
+.gc-label { font-family:'Press Start 2P',monospace; font-size:11px; color:var(--black); text-align:center; padding:0 3px; line-height:1.4; }
 
 .game-detail { flex:1; padding:16px; display:flex; flex-direction:column; min-width:0; background:white; border-left:none; overflow:auto; }
 .gd-title { font-family:'Press Start 2P',monospace; font-size:13px; color:var(--black); letter-spacing:1px; margin-bottom:4px; line-height:1.4; }

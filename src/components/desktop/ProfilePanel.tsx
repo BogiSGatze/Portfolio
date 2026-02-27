@@ -70,8 +70,8 @@ export default function ProfilePanel({ bringToFront }: ProfilePanelProps) {
           <div className="cv-section">ABOUT</div>
           <div className="cv-right">
             <p>
-              Frontend &amp; 3D tinkerer. Building small interactive experiences with React, Kotlin, and Three.js.
-              Passionate about clean code, retro aesthetics, and making the web a more fun place.
+              Frontend &amp; Backend tinkerer, who enjoys building clean, interactive applications with React, Kotlin, and modern web tech.
+              Passionate about clean code, retro aesthetics, good documentation, and making the web a more fun place.
             </p>
           </div>
 

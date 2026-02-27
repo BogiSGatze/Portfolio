@@ -45,11 +45,11 @@ export default function GalleryWindow({ closeWin, bringToFront }: GalleryWindowP
       {/* Lightbox detail */}
       {selected !== null && (
         <div className="gallery-lightbox" onClick={() => setSelected(null)}>
-          <div className="gallery-lightbox-inner nbwin cyan draggable" onClick={(e) => e.stopPropagation()}>
+          <div className="gallery-lightbox-inner nbwin cyan draggable no-resize" onClick={(e) => e.stopPropagation()}>
             <div className="nbwin-bar">
               <div className="nbwin-title">&#128444;&#65039; {GALLERY_IMAGES[selected].title}</div>
               <div className="nbwin-btns">
-                <div className="nbwin-btn" onClick={() => setSelected(null)}>&#215;</div>
+                <div className="nbwin-btn" onClick={() => setSelected(null)} onMouseDown={(e) => e.stopPropagation()}>&#215;</div>
               </div>
             </div>
             <div className="gallery-lightbox-body">

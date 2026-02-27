@@ -30,6 +30,9 @@ export default function Taskbar({ time, onShutdown, toggleWin }: TaskbarProps) {
       <div className="tb-item active" id="tb-map" onClick={() => toggleWin('map-win', 'tb-map')}>
         &#128506;&#65039; Map
       </div>
+      <div className="tb-item" id="tb-training" onClick={() => toggleWin('training-win', 'tb-training')}>
+        &#127891; Training
+      </div>
 
       <div className="tb-right">
         <span className="tb-clock">{time.slice(0, 5)}</span>

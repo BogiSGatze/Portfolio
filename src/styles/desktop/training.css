@@ -1,0 +1,269 @@
+/* ═══════════════════════════════════════════════════════════════════════════════
+   TRAINING / AUSBILDUNG WINDOW STYLES
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Training window specific - uses yellow theme */
+#training-win {
+  width: 700px;
+  height: 500px;
+}
+
+#training-win.nbwin {
+  background: var(--yellow);
+}
+
+.training-layout {
+  display: flex;
+  height: calc(100% - 36px);
+}
+
+/* Tech Stack List Sidebar */
+.stack-list {
+  width: 200px;
+  background: var(--mint);
+  border-right: 4px solid var(--black);
+  padding: 12px;
+  overflow-y: auto;
+  color: var(--black);
+}
+
+.stack-list-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  color: var(--black);
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.stack-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: var(--white);
+  border: 3px solid var(--black);
+  box-shadow: 4px 4px 0 var(--black);
+  cursor: pointer;
+  transition: all 0.1s;
+  color: var(--black);
+}
+
+.stack-item:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--black);
+  background: var(--cyan);
+}
+
+.stack-item.active {
+  background: var(--purple);
+  color: var(--white);
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+.stack-item.active .stack-name,
+.stack-item.active .stack-count {
+  color: var(--white);
+}
+
+.stack-icon {
+  font-size: 22px;
+}
+
+.stack-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stack-name {
+  font-weight: bold;
+  font-size: 11px;
+  font-family: 'Space Mono', monospace;
+  color: var(--black);
+}
+
+.stack-count {
+  font-size: 9px;
+  font-family: 'Space Mono', monospace;
+  color: var(--black);
+  opacity: 0.7;
+}
+
+/* Task Details Panel */
+.task-details {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.stack-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 4px solid var(--black);
+}
+
+.stack-icon-large {
+  font-size: 40px;
+}
+
+.stack-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--black);
+}
+
+/* Task Cards */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  background: var(--white);
+  border: 4px solid var(--black);
+  box-shadow: 6px 6px 0 var(--black);
+  padding: 14px;
+  color: var(--black);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--black);
+}
+
+.task-number {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  background: var(--pink);
+  color: var(--white);
+  padding: 6px 10px;
+  border: 2px solid var(--black);
+  box-shadow: 2px 2px 0 var(--black);
+}
+
+.task-duration {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.task-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+.task-desc {
+  margin: 0;
+  color: var(--black);
+  line-height: 1.5;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+}
+
+.task-learnings {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 3px dashed var(--purple);
+  color: var(--black);
+}
+
+.task-learnings strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--purple);
+}
+
+.task-learnings ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.task-learnings li {
+  margin-bottom: 4px;
+  color: var(--black);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.task-learnings li::marker {
+  color: var(--pink);
+}
+
+/* Placeholder State */
+.training-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--black);
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.training-placeholder p {
+  font-size: 12px;
+  font-family: 'Press Start 2P', monospace;
+  color: var(--black);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   GITHUB-STYLE SCROLLBAR (Vaporwave Theme)
+   ═══════════════════════════════════════════════════════════════════════════════ */
+
+.stack-list::-webkit-scrollbar,
+.task-details::-webkit-scrollbar {
+  width: 12px;
+}
+
+.stack-list::-webkit-scrollbar-track,
+.task-details::-webkit-scrollbar-track {
+  background: #161b22;
+  border-left: 3px solid var(--black);
+  border-radius: 0;
+}
+
+.stack-list::-webkit-scrollbar-thumb,
+.task-details::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6e3a82 0%, #9b59b6 50%, #d63384 100%);
+  border: 2px solid var(--black);
+  box-shadow: 2px 2px 0 var(--black);
+  border-radius: 0;
+}
+
+.stack-list::-webkit-scrollbar-thumb:hover,
+.task-details::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9b59b6 0%, #d63384 50%, #ff6ec7 100%);
+}
+
+/* Firefox scrollbar */
+.stack-list,
+.task-details {
+  scrollbar-width: thin;
+  scrollbar-color: #9b59b6 #161b22;
+}

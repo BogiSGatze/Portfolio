@@ -6,7 +6,9 @@ export type {
   Game,
   Project,
   ProjectImage,
+  GalleryImage,
   CvFile,
   TerminalLine,
-  GalleryImage,
+  TrainingTask,
+  TechStack,
 } from '@/constants/desktopData';

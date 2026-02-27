@@ -8,6 +8,7 @@ interface DesktopIconsProps {
 export default function DesktopIcons({ openWin }: DesktopIconsProps) {
   return (
     <>
+      {/* My Projects - First folder */}
       <div
         className="folder-icon"
         style={{ top: '56px', left: '16px' }}
@@ -22,9 +23,10 @@ export default function DesktopIcons({ openWin }: DesktopIconsProps) {
         <div className="folder-label">My Projects</div>
       </div>
 
+      {/* My CV - Second folder */}
       <div
         className="folder-icon"
-        style={{ top: '140px', left: '16px' }}
+        style={{ top: '156px', left: '16px' }}
         onDoubleClick={() => openWin('cv-files-win', 'tb-cvf')}
       >
         <div className="folder-img">
@@ -36,9 +38,10 @@ export default function DesktopIcons({ openWin }: DesktopIconsProps) {
         <div className="folder-label">My CV</div>
       </div>
 
+      {/* My Gallery - Third folder */}
       <div
         className="folder-icon"
-        style={{ top: '224px', left: '16px' }}
+        style={{ top: '256px', left: '16px' }}
         onDoubleClick={() => openWin('gallery-win', 'tb-gal')}
       >
         <div className="folder-img">
@@ -48,6 +51,21 @@ export default function DesktopIcons({ openWin }: DesktopIconsProps) {
           </div>
         </div>
         <div className="folder-label">My Gallery</div>
+      </div>
+
+      {/* Training / Ausbildung - Fourth folder */}
+      <div
+        className="folder-icon"
+        style={{ top: '356px', left: '16px' }}
+        onDoubleClick={() => openWin('training-win', 'tb-training')}
+      >
+        <div className="folder-img">
+          <div className="folder-tab yellow" />
+          <div className="folder-body yellow">
+            <span style={{ fontSize: 18 }}>&#127891;</span>
+          </div>
+        </div>
+        <div className="folder-label">Training / Ausbildung</div>
       </div>
 
       {/* Game icon on the desktop */}

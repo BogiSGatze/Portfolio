@@ -21,7 +21,7 @@ export default function TerminalWindow({
   closeWin,
 }: TerminalWindowProps) {
   return (
-    <div id="code-win" className="nbwin cyan draggable open">
+    <div id="code-win" className="nbwin cyan draggable no-resize open">
       <div className="nbwin-bar">
         <div className="nbwin-title">&#128187; BOGI.SYS &#8212; Terminal</div>
         <div className="nbwin-btns">
