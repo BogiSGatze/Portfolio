@@ -160,7 +160,6 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Three.js', 'Next.js', 'TypeScript'],
     desc: 'This very website \u2014 a neobrutalist vaporwave portfolio built with Next.js, React Three Fiber, and TypeScript. Features an interactive 3D CRT monitor intro, a retro desktop environment with draggable windows, a working terminal, and a love letter to 90s internet aesthetics which I would love to bring to life again.',
     image: '/projects/Portfolio.png',
-    githubUrl: 'https://github.com/BogisGatze/portfolio',
     liveUrl: 'https://bogisgatze.github.io/portfolio',
   },
   {
@@ -169,23 +168,19 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Node.js', 'Firebase'],
     desc: 'Who doesnt love to argue with strangers on the internet? Debate Duel is a web platform for hosting, joining, and voting in online debates. Users can challenge others, present arguments, and vote for the most convincing side. The app is built with React and Firebase, featuring real-time updates, notifications, and a modern, responsive UI.',
     image: '/projects/debateduel2.png',
-    githubUrl: 'https://github.com/BogisGatze/debate-duel',
-    liveUrl: 'https://debate-duel-demo.vercel.app',
+    liveUrl: 'https://debate-duel-905db.web.app',
   },
   {
     file: 'library_app.cs',
     name: 'Library App (still in development)',
     tech: ['Kotlin', 'XML', 'Firebase'],
     desc: 'An Android library management app built with Kotlin and modern architecture components. Users can organize books into customizable shelves, track reading history, rate titles by mood, add personal notes, and scan barcodes for quick entry. Includes reading analytics and challenge tracking - because if you are going to hoard books, you might as well visualize it properly.',
-    image: '/projects/library.png',
-    githubUrl: 'https://github.com/BogisGatze/library-app',
+    image: '/projects/Essential-Books.jpg',
   }
 ];
 
 export const CV_FILES: CvFile[] = [
-  { file: 'Bogi_CV_2025.pdf', label: 'Curriculum Vitae', icon: '\u{1F4C4}', path: '/cv/Bogi_CV_2025.pdf' },
-  { file: 'Cover_Letter.pdf', label: 'Cover Letter', icon: '\u2709\uFE0F', path: '/cv/Cover_Letter.pdf' },
-  { file: 'Certificates.pdf', label: 'Certificates & Awards', icon: '\u{1F3C6}', path: '/cv/Certificates.pdf' },
+  { file: 'Lebenslauf - Boglarka Csizmadia - Softwareentwickler.pdf', label: 'Lebenslauf', icon: '\u{1F4C4}', path: '/cv/Lebenslauf - Boglarka Csizmadia - Softwareentwickler.pdf' },
 ];
 
 /** Lines shown when the terminal first boots up */
@@ -253,7 +248,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     description: 'A lot of times I mentioned how much I love playing TFT, but am I good at it? Well, here is your answer! I do have my good days as well I promise.',
   },
 ];
-/** Training tasks organized by tech stack (Ausbildung) */
+/** Training - Skills learned during Ausbildung organized by tech stack */
 export const TRAINING_STACKS: TechStack[] = [
   {
     id: 'csharp',
@@ -261,8 +256,8 @@ export const TRAINING_STACKS: TechStack[] = [
     icon: '🔷',
     tasks: [
       {
-        title: 'Language File Checker',
-        description: 'Developed a C# tool to compare two XML language files by validating translation keys. The program detects missing and duplicate keys and exports the results into a structured `.txt` report.',
+        title: 'Core C# Development',
+        description: 'Learned fundamental C# programming concepts including object-oriented design, LINQ, file I/O operations, XML parsing, and building command-line applications.',
       }
     ],
   },
@@ -272,36 +267,32 @@ export const TRAINING_STACKS: TechStack[] = [
     icon: '🟣',
     tasks: [
       {
-        title: 'Harry Potter API App',
-        description: 'Built an Android application consuming a public Harry Potter API. Implemented multiple views to display characters, professors, and spells, including detail dialogs, bottom navigation, and search functionality. Strong focus on UI/UX design and clean XML layout structuring.',
+        title: 'Android App Development',
+        description: 'Built Android applications using Kotlin and XML layouts. Learned to work with REST APIs, implement navigation patterns, create responsive UIs, and follow Material Design guidelines.',
       },
       {
-        title: 'SonarQube & SonarLint Integration',
-        description: 'Integrated SonarQube and SonarLint into internal development projects to improve code quality and maintainability. Supported static code analysis adoption and ensured compliance with defined quality gates.',
+        title: 'Code Quality Tools',
+        description: 'Gained experience with static code analysis tools like SonarQube and SonarLint to improve code quality, identify potential bugs, and maintain clean codebases.',
       },
       {
-        title: 'Database Fail-Gracefully Handling',
-        description: 'Refactored database error handling to prevent application crashes. Implemented graceful failure logic that displays user-friendly dialogs when database connectivity or query issues occur.',
+        title: 'Error Handling & UX',
+        description: 'Learned best practices for error handling, implementing graceful failure patterns, and creating user-friendly feedback through dialogs and notifications.',
       },
       {
-        title: 'Internal Application Testing',
-        description: 'Conducted intensive testing on internal applications to identify and document bugs. Contributed to improved stability, reliability, and overall software quality.',
+        title: 'Software Testing',
+        description: 'Practiced manual and automated testing methodologies, bug documentation, and quality assurance processes to ensure software reliability.',
       },
       {
-        title: 'UI Rework',
-        description: 'Reworked UI components according to Figma design specifications. Adjusted fonts, colors, spacing, and component sizing to ensure visual consistency and design accuracy.',
+        title: 'UI/UX Implementation',
+        description: 'Learned to translate design mockups into functional interfaces, working with typography, color schemes, spacing systems, and responsive layouts.',
       },
       {
-        title: 'Authentication Flow App',
-        description: 'Developed a demo application to demonstrate OAuth 2.0 authentication flow. Used as a learning and presentation tool to explain authentication mechanisms and token handling.',
+        title: 'Authentication & Security',
+        description: 'Studied OAuth 2.0 authentication flows, token-based authentication, and secure credential handling in mobile applications.',
       },
       {
-        title: 'BLE Mode Check',
-        description: 'Implemented logic to detect whether a device operates in BLE Central or Peripheral mode, supporting Bluetooth-related feature validation.',
-      },
-      {
-        title: 'Barcode Reader Implementation',
-        description: 'Integrated barcode scanning functionality into an Android application, enabling data capture via device camera and processing scanned results.',
+        title: 'Hardware Integration',
+        description: 'Explored Bluetooth Low Energy (BLE) communication and camera-based features like barcode scanning in Android applications.',
       }
     ],
   },
@@ -311,9 +302,9 @@ export const TRAINING_STACKS: TechStack[] = [
     icon: '🔶',
     tasks: [
       {
-        title: 'Final Project - Machine Interruption Overview',
-        description: 'Developed a full-stack web application using C# and Blazor to visualize machine interruptions and automatically classify them based on duration. Implemented frontend and backend components, including automated classification logic and structured data presentation.',
-      },
+        title: 'Full-Stack Web Development',
+        description: 'Doing a final project using C# and Blazor to build a full-stack web application with frontend components, backend logic, and data visualization features.',
+      }
     ],
   },
 ];

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { PROJECTS } from '@/constants/desktopData';
 
@@ -9,6 +10,8 @@ interface ProjectsWindowProps {
 
 /** Projects window showing project cards with images, links and descriptions. */
 export default function ProjectsWindow({ closeWin }: ProjectsWindowProps) {
+  const [showNotif, setShowNotif] = useState(false);
+
   return (
     <div id="projects-win" className="nbwin mint draggable" style={{ display: 'none' }}>
       <div className="nbwin-bar">
@@ -18,6 +21,17 @@ export default function ProjectsWindow({ closeWin }: ProjectsWindowProps) {
         </div>
       </div>
       <div className="nbwin-body projects-body">
+        <div className="projects-header">
+          <a
+            href="https://github.com/BogisGatze"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link github-link github-profile-link"
+            title="Visit my GitHub profile"
+          >
+            <span>&#128187;</span> My GitHub Profile
+          </a>
+        </div>
         <div className="projects-grid">
           {PROJECTS.map((project, idx) => (
             <div key={idx} className="project-card">
@@ -52,18 +66,16 @@ export default function ProjectsWindow({ closeWin }: ProjectsWindowProps) {
 
                 {/* Links */}
                 <div className="project-card-links">
-                  {project.githubUrl && (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link github-link"
-                      title="View on GitHub"
-                    >
-                      <span>&#128187;</span> GitHub
-                    </a>
-                  )}
                   {project.liveUrl && (
+                    project.name === 'Portfolio Website' ? (
+                      <button
+                        className="project-link live-link"
+                        onClick={() => setShowNotif(true)}
+                        title="You're already here!"
+                      >
+                        <span>&#127760;</span> Live Demo
+                      </button>
+                    ) : (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -73,6 +85,7 @@ export default function ProjectsWindow({ closeWin }: ProjectsWindowProps) {
                     >
                       <span>&#127760;</span> Live Demo
                     </a>
+                    )
                   )}
                 </div>
               </div>
@@ -80,6 +93,16 @@ export default function ProjectsWindow({ closeWin }: ProjectsWindowProps) {
           ))}
         </div>
       </div>
+
+      {showNotif && (
+        <div className="music-notif">
+          <div className="music-notif-icon">&#127760;</div>
+          <p className="music-notif-text">
+            You&apos;re already browsing this site - looks like the Live Demo is working!
+          </p>
+          <button className="music-notif-close" onClick={() => setShowNotif(false)}>&#215;</button>
+        </div>
+      )}
     </div>
   );
 }

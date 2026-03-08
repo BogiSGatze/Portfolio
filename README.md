@@ -1,36 +1,187 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💾 BOGI.OS — Retro Portfolio
 
-## Getting Started
+> *"A love letter to 90s internet aesthetics and the golden age of computing"*
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
+[![Three.js](https://img.shields.io/badge/Three.js-0.183-white?logo=three.js)](https://threejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)](https://www.typescriptlang.org/)
+[![Zustand](https://img.shields.io/badge/Zustand-State-FF9F1C)](https://github.com/pmndrs/zustand)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+🌐 **Live Demo:** [https://debate-duel-905db.web.app](https://debate-duel-905db.web.app)
+
+---
+
+## ✨ Features
+
+### 🖥️ Interactive 3D Intro
+- Fully interactive **CRT monitor** built with **React Three Fiber**
+- Working power button with flash transition effect
+- Retro scanline shaders and CRT distortion effects
+- Navigate to the desktop environment by "powering on" the machine
+
+### 🗔️ Desktop Environment
+- **Draggable windows** with neobrutalist design
+- Functional **terminal** with custom commands
+- **Projects window** showcasing my work with live links
+- **Games collection** — because a personal site should have personality
+- **Photo gallery** with vaporwave aesthetics
+- Interactive **map** showing my location
+- Working **clock** and system tray
+
+### 🎵 Vaporwave Aesthetics
+- Animated cassette tape music player
+- Retro color palette (hot pink, cyan, lime)
+- Neobrutalist UI elements with bold borders and shadows
+- Animated CRT background effects
+- Custom cursor and hover states
+
+### 📊 GitHub Integration
+- **GitHub Calendar** widget showing contribution graph
+- Direct links to repositories
+- Project cards with tech stack badges
+
+---
+
+## 🚀 Tech Stack
+
+| Category | Technology |
+|----------|------------|
+| **Framework** | Next.js 16 (App Router) |
+| **UI Library** | React 19 |
+| **Language** | TypeScript 5 |
+| **3D Graphics** | Three.js + React Three Fiber |
+| **Styling** | SCSS Modules + Tailwind CSS |
+| **State Management** | Zustand |
+| **Deployment** | GitHub Pages |
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── page.tsx           # 3D intro landing page
+│   ├── desktop/           # Desktop environment
+│   └── xp/                # XP-themed variant
+├── components/
+│   ├── 3d/                # Three.js components
+│   │   ├── Computer.tsx   # 3D CRT monitor model
+│   │   ├── Scene.tsx      # Main 3D scene
+│   │   └── ModelMonitor.tsx
+│   ├── desktop/           # Desktop UI components
+│   │   ├── ProjectsWindow.tsx
+│   │   ├── TerminalWindow.tsx
+│   │   ├── GamesWindow.tsx
+│   │   ├── GitHubWidget.tsx
+│   │   ├── CassetteWidget.tsx
+│   │   └── ...
+│   └── ui/                # Shared UI components
+├── constants/
+│   └── desktopData.ts     # All content data
+├── store/
+│   └── computerStore.ts   # Zustand state management
+├── styles/                # SCSS modules & CSS
+└── hooks/                 # Custom React hooks
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js 18+ 
+- npm / yarn / pnpm
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Clone the repository
+git clone https://github.com/BogisGatze/portfolio.git
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Navigate to project
+cd portfolio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Install dependencies
+npm install
 
-## Deploy on Vercel
+# Start development server
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 🎮 Desktop Commands
+
+The terminal supports the following commands:
+
+| Command | Description |
+|---------|-------------|
+| `help` | Show available commands |
+| `about` | Display information about me |
+| `skills` | List my technical skills |
+| `contact` | Show contact information |
+| `clear` | Clear terminal output |
+| `neofetch` | Display system info (just for fun) |
+
+---
+
+## 📝 Projects Showcase
+
+| Project | Tech Stack | Description |
+|---------|------------|-------------|
+| **Debate Duel** | React, Node.js, Firebase | Platform for hosting and voting in online debates |
+| **Library App** | Kotlin, XML, Firebase | Android app for managing personal book collections |
+| **Portfolio** | Next.js, Three.js, TypeScript | This very website you're looking at |
+
+---
+
+## 🎨 Design Philosophy
+
+> "I would love to bring the 90s internet aesthetics back to life again."
+
+This portfolio is designed to be:
+- **Playful** — Gaming references, retro UI, eastereggs
+- **Interactive** — Not just a static page, but an experience
+- **Personal** — Shows who I am beyond just code
+- **Nostalgic** — Celebrating the early web's charm
+
+---
+
+## 📸 Screenshots
+
+*Coming soon — or better yet, visit the [live site](https://bogisgatze.github.io/portfolio)!*
+
+---
+
+## 📬 Contact
+
+- 💼 **LinkedIn:** [linkedin.com/in/bogdana](https://linkedin.com/in/bogdana)
+- 🐙 **GitHub:** [@BogisGatze](https://github.com/BogisGatze)
+- 📧 **Email:** *[your-email@example.com]*
+
+---
+
+## 🙏 Acknowledgments
+
+- 3D computer model inspiration from the retro computing community
+- Color palette inspired by vaporwave and synthwave aesthetics
+- Neobrutalist design trends from modern web design
+
+---
+
+<p align="center">
+  <samp>
+    Made with 💜 and too much caffeine<br>
+    <code>ctrl + alt + del</code> if nothing works
+  </samp>
+</p>

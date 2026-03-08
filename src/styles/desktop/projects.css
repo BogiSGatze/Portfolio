@@ -18,6 +18,30 @@
   max-height: calc(80vh - 60px);
 }
 
+/* GitHub Profile Header */
+.projects-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.github-profile-link {
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 12px 28px;
+  border: 3px solid var(--black);
+  background: var(--yellow);
+  box-shadow: 4px 4px 0 var(--black);
+  transition: transform 0.1s, box-shadow 0.1s;
+  letter-spacing: 0.5px;
+}
+
+.github-profile-link:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--black);
+  background: var(--cyan);
+}
+
 /* Projects Grid */
 .projects-grid {
   display: grid;
