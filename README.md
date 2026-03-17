@@ -165,9 +165,8 @@ This portfolio is designed to be:
 
 ## 📬 Contact
 
-- 💼 **LinkedIn:** [linkedin.com/in/bogdana](https://linkedin.com/in/bogdana)
 - 🐙 **GitHub:** [@BogisGatze](https://github.com/BogisGatze)
-- 📧 **Email:** *[your-email@example.com]*
+- 📧 **Email:** *[bogi.csizm@gmail.com]*
 
 ---
 
