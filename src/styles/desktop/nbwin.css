@@ -12,6 +12,9 @@
   overflow:auto;
   min-width:120px;
   min-height:80px;
+  max-width:95vw;
+  max-height:95vh;
+  box-sizing:border-box;
   --ws:1;
 }
 
