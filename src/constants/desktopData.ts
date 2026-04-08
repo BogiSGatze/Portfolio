@@ -180,7 +180,7 @@ export const PROJECTS: Project[] = [
 ];
 
 export const CV_FILES: CvFile[] = [
-  { file: 'Lebenslauf - Boglarka Csizmadia - Softwareentwickler.pdf', label: 'Lebenslauf', icon: '\u{1F4C4}', path: '/cv/Lebenslauf - Boglarka Csizmadia - Softwareentwickler.pdf' },
+  { file: 'Lebenslauf_Boglarka_Csizmadia.pdf', label: 'Lebenslauf', icon: '\u{1F4C4}', path: '/cv/Lebenslauf_Boglarka_Csizmadia.pdf' },
 ];
 
 /** Lines shown when the terminal first boots up */
