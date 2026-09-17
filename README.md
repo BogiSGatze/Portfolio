@@ -66,3 +66,9 @@ src/
 ## Contact
 
 Find me on [GitHub](https://github.com/BogiSGatze).
+
+## Asset credits
+
+Third-party artwork, trademarks, media, and UI acknowledgements are documented
+in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Verify the CRT model's
+original source and redistribution terms before making the repository public.
