@@ -21,7 +21,7 @@
  * - Topbar / Taskbar     → top and bottom bars
  */
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
 /* ── Hooks ── */
@@ -50,6 +50,7 @@ import {
   GitHubWidget,
   TrainingWindow,
 } from '@/components/desktop';
+import type { SpotifyEmbedController } from '@/components/desktop/CassetteWidget';
 
 /* ═══════════════════════════════════════════
    MAIN COMPONENT
@@ -64,7 +65,8 @@ export default function Desktop() {
   const [isShuttingDown, setIsShuttingDown] = useState(false);
   const [showShutdownFlash, setShowShutdownFlash] = useState(false);
   const [musicPrompt, setMusicPrompt] = useState(true);
-  const [musicAutoplay, setMusicAutoplay] = useState(false);
+  const spotifyControllerRef = useRef<SpotifyEmbedController | null>(null);
+  const [musicReady, setMusicReady] = useState(false);
   const [musicNotif, setMusicNotif] = useState<string | null>(null);
 
   /* Init draggable windows on mount */
@@ -80,9 +82,13 @@ export default function Desktop() {
 
   /* ── Music prompt handlers ── */
   const handleMusicAccept = useCallback(() => {
-    setMusicAutoplay(true);
+    spotifyControllerRef.current?.play();
     setMusicPrompt(false);
-    setMusicNotif('autoplay');
+  }, []);
+
+  const handleSpotifyReady = useCallback((controller: SpotifyEmbedController) => {
+    spotifyControllerRef.current = controller;
+    setMusicReady(true);
   }, []);
 
   const handleMusicDecline = useCallback(() => {
@@ -132,7 +138,7 @@ export default function Desktop() {
       <Topbar time={time} />
 
       {/* ── Decorations ── */}
-      <CassetteWidget musicAutoplay={musicAutoplay} />
+      <CassetteWidget onControllerReady={handleSpotifyReady} />
       <DesktopIcons openWin={openWin} />
       <GitHubWidget />
 
@@ -161,6 +167,7 @@ export default function Desktop() {
       <MusicPrompt
         showPrompt={musicPrompt}
         notification={musicNotif}
+        musicReady={musicReady}
         onAccept={handleMusicAccept}
         onDecline={handleMusicDecline}
         onDismissNotif={() => setMusicNotif(null)}
