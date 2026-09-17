@@ -10,7 +10,7 @@ export default function Topbar({ time }: TopbarProps) {
     <header id="topbar">
       <div className="top-left">BOGI.OS v1.0</div>
       <div className="top-right">
-        <div className="top-tag">software dev in training · roding, de</div>
+        <div className="top-tag">Software Developer in Training · Bavaria, DE</div>
         <div id="topClock">{time}</div>
       </div>
     </header>

@@ -30,7 +30,7 @@ export default function ProfilePanel({ bringToFront }: ProfilePanelProps) {
           </div>
           <div>
             <div className="av-name">BOGI</div>
-            <div className="av-title">software dev (in training)</div>
+            <div className="av-title">Software Developer in Training</div>
             <div className="av-hint">click to expand</div>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function ProfilePanel({ bringToFront }: ProfilePanelProps) {
             </div>
             <div>
               <div className="cv-name">BOGI</div>
-              <div className="cv-role">software dev (in training)</div>
+              <div className="cv-role">Software Developer in Training</div>
               <div className="cv-loc">Roding, Bavaria (DE)</div>
             </div>
           </div>

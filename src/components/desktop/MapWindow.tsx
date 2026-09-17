@@ -24,11 +24,11 @@ export default function MapWindow({ closeWin }: MapWindowProps) {
             />
           </svg>
           <div className="map-cities">
-            <MapPin x={52} y={35} icon="&#127969;" label="Mühlbauer Automation GmbH, Roding, DE" anim="grow" />
+            <MapPin x={52} y={35} icon="&#127969;" label="Software development training · Bavaria, DE" anim="grow" />
             <MapPin x={58} y={48} icon="&#127963;&#65039;" label="Budapest, HU" anim="slidein" />
-            <MapPin x={30} y={22} icon="&#127959;&#65039;" label="FOS Schwandorf, Abitur aquired" anim="grow" />
-            <MapPin x={72} y={28} icon="&#127795;" label="Worked at a retirement home, Nittenau, DE" anim="slidein" />
-            <MapPin x={20} y={62} icon="&#127866;" label="Next aspired travel destination, Munich, DE" anim="grow" />
+            <MapPin x={30} y={22} icon="&#127959;&#65039;" label="School years · Bavaria, DE" anim="grow" />
+            <MapPin x={72} y={28} icon="&#127795;" label="Previous work experience · Bavaria, DE" anim="slidein" />
+            <MapPin x={20} y={62} icon="&#127866;" label="Next travel destination · Munich, DE" anim="grow" />
             <MapPin x={75} y={50} icon="&#127760;" label="Somewhere on the Internet, probably Reddit" anim="slidein" />
           </div>
         </div>
