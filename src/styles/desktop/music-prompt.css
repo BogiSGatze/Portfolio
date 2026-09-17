@@ -62,6 +62,12 @@
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0 var(--black);
 }
+.music-btn:disabled {
+  cursor: wait;
+  opacity: 0.65;
+  transform: none;
+  box-shadow: 4px 4px 0 var(--black);
+}
 .music-btn-yes {
   background: var(--cyan);
   color: var(--black);
