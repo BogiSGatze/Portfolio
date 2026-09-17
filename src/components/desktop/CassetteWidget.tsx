@@ -1,11 +1,84 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
+export interface SpotifyEmbedController {
+  play: () => void;
+  destroy: () => void;
+}
+
+interface SpotifyIframeApi {
+  createController: (
+    element: HTMLElement,
+    options: { uri: string; width: number; height: number },
+    callback: (controller: SpotifyEmbedController) => void,
+  ) => void;
+}
+
+declare global {
+  interface Window {
+    onSpotifyIframeApiReady?: (api: SpotifyIframeApi) => void;
+    spotifyIframeApi?: SpotifyIframeApi;
+  }
+}
+
 interface CassetteWidgetProps {
-  musicAutoplay: boolean;
+  onControllerReady: (controller: SpotifyEmbedController) => void;
 }
 
 /** Cassette tape decoration with Spotify player. */
-export default function CassetteWidget({ musicAutoplay }: CassetteWidgetProps) {
+export default function CassetteWidget({ onControllerReady }: CassetteWidgetProps) {
+  const embedRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let controller: SpotifyEmbedController | null = null;
+    let disposed = false;
+
+    const createPlayer = (api: SpotifyIframeApi) => {
+      if (!embedRef.current || disposed) return;
+
+      api.createController(
+        embedRef.current,
+        {
+          uri: 'spotify:playlist:7n5xGCYrcZpPCr3ifTYx5i',
+          width: 300,
+          height: 152,
+        },
+        (createdController) => {
+          if (disposed) {
+            createdController.destroy();
+            return;
+          }
+
+          controller = createdController;
+          onControllerReady(createdController);
+        },
+      );
+    };
+
+    if (window.spotifyIframeApi) {
+      createPlayer(window.spotifyIframeApi);
+    } else {
+      window.onSpotifyIframeApiReady = (api) => {
+        window.spotifyIframeApi = api;
+        createPlayer(api);
+      };
+
+      if (!document.querySelector('script[data-spotify-iframe-api]')) {
+        const script = document.createElement('script');
+        script.src = 'https://open.spotify.com/embed/iframe-api/v1';
+        script.async = true;
+        script.dataset.spotifyIframeApi = 'true';
+        document.body.appendChild(script);
+      }
+    }
+
+    return () => {
+      disposed = true;
+      controller?.destroy();
+    };
+  }, [onControllerReady]);
+
   return (
     <div id="cassette-desk">
       <div className="tape-card">
@@ -46,17 +119,7 @@ export default function CassetteWidget({ musicAutoplay }: CassetteWidgetProps) {
       </div>
 
       <div className="spotify-under-cass">
-        <iframe
-          key={musicAutoplay ? 'sp-auto' : 'sp-manual'}
-          style={{ borderRadius: 8 }}
-          src={`https://open.spotify.com/embed/playlist/7n5xGCYrcZpPCr3ifTYx5i?utm_source=generator&theme=0${musicAutoplay ? '&autoplay=1' : ''}`}
-          width="300"
-          height="152"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          title="Spotify Playlist"
-        />
+        <div ref={embedRef} />
       </div>
     </div>
   );

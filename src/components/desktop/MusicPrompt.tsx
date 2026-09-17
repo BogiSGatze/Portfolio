@@ -3,6 +3,7 @@
 interface MusicPromptProps {
   showPrompt: boolean;
   notification: string | null;
+  musicReady: boolean;
   onAccept: () => void;
   onDecline: () => void;
   onDismissNotif: () => void;
@@ -12,6 +13,7 @@ interface MusicPromptProps {
 export default function MusicPrompt({
   showPrompt,
   notification,
+  musicReady,
   onAccept,
   onDecline,
   onDismissNotif,
@@ -31,7 +33,13 @@ export default function MusicPrompt({
                 Would you care to listen to some music while you are browsing?
               </p>
               <div className="music-prompt-btns">
-                <button className="music-btn music-btn-yes" onClick={onAccept}>Yes</button>
+                <button
+                  className="music-btn music-btn-yes"
+                  onClick={onAccept}
+                  disabled={!musicReady}
+                >
+                  {musicReady ? 'Yes' : 'Loading...'}
+                </button>
                 <button className="music-btn music-btn-no" onClick={onDecline}>No</button>
               </div>
             </div>
