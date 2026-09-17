@@ -1,186 +1,68 @@
-# 💾 BOGI.OS — Retro Portfolio
+# BOGI.OS
 
-> *"A love letter to 90s internet aesthetics and the golden age of computing"*
+An interactive portfolio built as a small retro operating system. It opens on a 3D CRT computer and leads into a draggable desktop filled with projects, a terminal, music, games, and a few personal details.
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
-[![Three.js](https://img.shields.io/badge/Three.js-0.183-white?logo=three.js)](https://threejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)](https://www.typescriptlang.org/)
-[![Zustand](https://img.shields.io/badge/Zustand-State-FF9F1C)](https://github.com/pmndrs/zustand)
+[View the live site](https://portfolio-eight-zeta-48.vercel.app)
 
-🌐 **Live Demo:** [https://debate-duel-905db.web.app](https://debate-duel-905db.web.app)
+![BOGI.OS desktop](desktop.png)
 
----
+## About
 
-## ✨ Features
+I wanted the site to feel more like something you can explore than a conventional portfolio page. The result mixes early-web nostalgia, vaporwave colours, and desktop UI patterns with a modern React stack.
 
-### 🖥️ Interactive 3D Intro
-- Fully interactive **CRT monitor** built with **React Three Fiber**
-- Working power button with flash transition effect
-- Retro scanline shaders and CRT distortion effects
-- Navigate to the desktop environment by "powering on" the machine
+Highlights:
 
-### 🗔️ Desktop Environment
-- **Draggable windows** with neobrutalist design
-- Functional **terminal** with custom commands
-- **Projects window** showcasing my work with live links
-- **Games collection** — because a personal site should have personality
-- **Photo gallery** with vaporwave aesthetics
-- Interactive **map** showing my location
-- Working **clock** and system tray
+- Interactive 3D CRT intro built with React Three Fiber
+- Draggable, focus-aware desktop windows
+- Project browser and downloadable CV
+- Terminal with custom commands
+- GitHub activity, music, gallery, map, and games widgets
+- Responsive layout with custom CRT and scanline effects
 
-### 🎵 Vaporwave Aesthetics
-- Animated cassette tape music player
-- Retro color palette (hot pink, cyan, lime)
-- Neobrutalist UI elements with bold borders and shadows
-- Animated CRT background effects
-- Custom cursor and hover states
+## Screenshots
 
-### 📊 GitHub Integration
-- **GitHub Calendar** widget showing contribution graph
-- Direct links to repositories
-- Project cards with tech stack badges
+| Intro | Desktop |
+| --- | --- |
+| ![3D intro screen](intro.png) | ![Interactive desktop](desktop.png) |
 
----
+## Built with
 
-## 🚀 Tech Stack
+- Next.js 16 and React 19
+- TypeScript
+- Three.js and React Three Fiber
+- Zustand
+- SCSS modules and Tailwind CSS
 
-| Category | Technology |
-|----------|------------|
-| **Framework** | Next.js 16 (App Router) |
-| **UI Library** | React 19 |
-| **Language** | TypeScript 5 |
-| **3D Graphics** | Three.js + React Three Fiber |
-| **Styling** | SCSS Modules + Tailwind CSS |
-| **State Management** | Zustand |
-| **Deployment** | GitHub Pages |
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── app/                    # Next.js App Router
-│   ├── page.tsx           # 3D intro landing page
-│   ├── desktop/           # Desktop environment
-│   └── xp/                # XP-themed variant
-├── components/
-│   ├── 3d/                # Three.js components
-│   │   ├── Computer.tsx   # 3D CRT monitor model
-│   │   ├── Scene.tsx      # Main 3D scene
-│   │   └── ModelMonitor.tsx
-│   ├── desktop/           # Desktop UI components
-│   │   ├── ProjectsWindow.tsx
-│   │   ├── TerminalWindow.tsx
-│   │   ├── GamesWindow.tsx
-│   │   ├── GitHubWidget.tsx
-│   │   ├── CassetteWidget.tsx
-│   │   └── ...
-│   └── ui/                # Shared UI components
-├── constants/
-│   └── desktopData.ts     # All content data
-├── store/
-│   └── computerStore.ts   # Zustand state management
-├── styles/                # SCSS modules & CSS
-└── hooks/                 # Custom React hooks
-```
-
----
-
-## 🛠️ Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm / yarn / pnpm
-
-### Installation
+## Run locally
 
 ```bash
-# Clone the repository
-git clone https://github.com/BogisGatze/portfolio.git
-
-# Navigate to project
-cd portfolio
-
-# Install dependencies
+git clone https://github.com/BogiSGatze/Portfolio.git
+cd Portfolio
 npm install
-
-# Start development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-### Build for Production
+For a production build:
 
 ```bash
 npm run build
+npm start
 ```
 
----
+## Project layout
 
-## 🎮 Desktop Commands
+```text
+src/
+├── app/              # App Router pages
+├── components/3d/    # CRT model and Three.js scene
+├── components/desktop/
+├── hooks/            # Window, terminal, clock, and drag logic
+├── store/            # Shared Zustand state
+└── styles/           # Desktop and component styles
+```
 
-The terminal supports the following commands:
+## Contact
 
-| Command | Description |
-|---------|-------------|
-| `help` | Show available commands |
-| `about` | Display information about me |
-| `skills` | List my technical skills |
-| `contact` | Show contact information |
-| `clear` | Clear terminal output |
-| `neofetch` | Display system info (just for fun) |
-
----
-
-## 📝 Projects Showcase
-
-| Project | Tech Stack | Description |
-|---------|------------|-------------|
-| **Debate Duel** | React, Node.js, Firebase | Platform for hosting and voting in online debates |
-| **Library App** | Kotlin, XML, Firebase | Android app for managing personal book collections |
-| **Portfolio** | Next.js, Three.js, TypeScript | This very website you're looking at |
-
----
-
-## 🎨 Design Philosophy
-
-> "I would love to bring the 90s internet aesthetics back to life again."
-
-This portfolio is designed to be:
-- **Playful** — Gaming references, retro UI, eastereggs
-- **Interactive** — Not just a static page, but an experience
-- **Personal** — Shows who I am beyond just code
-- **Nostalgic** — Celebrating the early web's charm
-
----
-
-## 📸 Screenshots
-
-*Coming soon — or better yet, visit the [live site](https://bogisgatze.github.io/portfolio)!*
-
----
-
-## 📬 Contact
-
-- 🐙 **GitHub:** [@BogisGatze](https://github.com/BogisGatze)
-- 📧 **Email:** *[bogi.csizm@gmail.com]*
-
----
-
-## 🙏 Acknowledgments
-
-- 3D computer model inspiration from the retro computing community
-- Color palette inspired by vaporwave and synthwave aesthetics
-- Neobrutalist design trends from modern web design
-
----
-
-<p align="center">
-  <samp>
-    Made with 💜 and too much caffeine<br>
-    <code>ctrl + alt + del</code> if nothing works
-  </samp>
-</p>
+Find me on [GitHub](https://github.com/BogiSGatze).
