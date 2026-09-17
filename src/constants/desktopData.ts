@@ -84,7 +84,7 @@ export const GAMES: Game[] = [
     icon: '/fable.webp',
     genre: 'Action RPG',
     platform: 'PC/Xbox',
-    desc: 'The most timeless franchise where details still mattered. Will you be the hero or the villain? Or...nothing? Life has difficult decisions indeed. Love the british humor! Main objective: Be the true Chicken Chaser you were destined to be!',
+    desc: 'A timeless franchise where the details still matter. Will you be the hero, the villain, or something in between? I love its distinctly British humour. Main objective: become the Chicken Chaser you were destined to be!',
     rating: 5,
   },
   {
@@ -100,7 +100,7 @@ export const GAMES: Game[] = [
     icon: '/tft.png',
     genre: 'Autobattler',
     platform: 'PC/Mobile',
-    desc: "Teamfight Tactics...the main addiction. Ranked every season, theory-crafting comps at 2am, blaming augments for every single loss. And I still haven't hit Emerald! I am indeed just a noob.",
+    desc: "Teamfight Tactics is my competitive comfort game. I play ranked, theory-craft compositions, and occasionally blame the augments. Emerald is still a work in progress.",
     rating: 5,
   },
   {
@@ -160,19 +160,19 @@ export const PROJECTS: Project[] = [
     tech: ['React', 'Three.js', 'Next.js', 'TypeScript'],
     desc: 'This very website \u2014 a neobrutalist vaporwave portfolio built with Next.js, React Three Fiber, and TypeScript. Features an interactive 3D CRT monitor intro, a retro desktop environment with draggable windows, a working terminal, and a love letter to 90s internet aesthetics which I would love to bring to life again.',
     image: '/projects/Portfolio.png',
-    liveUrl: 'https://bogisgatze.github.io/portfolio',
+    liveUrl: 'https://portfolio-eight-zeta-48.vercel.app',
   },
   {
     file: 'debate_duel.kt',
     name: 'Debate Duel',
     tech: ['React', 'Node.js', 'Firebase'],
-    desc: 'Who doesnt love to argue with strangers on the internet? Debate Duel is a web platform for hosting, joining, and voting in online debates. Users can challenge others, present arguments, and vote for the most convincing side. The app is built with React and Firebase, featuring real-time updates, notifications, and a modern, responsive UI.',
+    desc: 'Debate Duel is a web platform for hosting, joining, and voting in online debates. Users can challenge others, present arguments, and vote for the most convincing side. Built with React and Firebase, it features real-time updates, notifications, and a responsive interface.',
     image: '/projects/debateduel2.png',
     liveUrl: 'https://debate-duel-905db.web.app',
   },
   {
     file: 'library_app.cs',
-    name: 'Library App (still in development)',
+    name: 'Library App (in development)',
     tech: ['Kotlin', 'XML', 'Firebase'],
     desc: 'An Android library management app built with Kotlin and modern architecture components. Users can organize books into customizable shelves, track reading history, rate titles by mood, add personal notes, and scan barcodes for quick entry. Includes reading analytics and challenge tracking - because if you are going to hoard books, you might as well visualize it properly.',
     image: '/projects/Essential-Books.jpg',
@@ -214,7 +214,7 @@ export const TECH_STACK = [
 
 /** Hobbies displayed in the profile panel */
 export const HOBBIES = [
-  'TFT \u2014 dangerously addicted, send help',
+  'TFT \u2014 ranked strategy enthusiast',
   'Reading \u2014 fiction, fantasy, anything good',
   'Movies \u2014 always watching something new',
   'Gaming \u2014 see Games.exe for the full list',
@@ -225,22 +225,22 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   {
     src: '/projects/background.png',
     title: 'Determination',
-    description: 'The process of me deciding a prtfolio should involve a lot of trial and error, so here is a picture of me manually removing the background of our dear Pengu, who you can see in his full glory inside the Games.exe',
+    description: 'Building this portfolio involved plenty of trial and error. Here I am manually removing the background from Pengu, who appears in full glory inside Games.exe.',
   },
   {
     src: '/projects/debateduel2.png',
     title: 'Debate Duel \u2014 Home',
-    description: 'The landing page of Debate Duel, a platform for hosting and joining online debates. Because who doesnt love a good debate? This app you can also find in my Projects window. If you like to "argue" with strangers please visit this website:',
+    description: 'The landing page of Debate Duel, a platform for hosting and joining online debates. You can also find the app in my Projects window. If you enjoy a good debate, take a look:',
   },
   {
     src: '/projects/tape.png',
-    title: 'The Tape of Torture',
+    title: 'The Cassette Experiment',
     description: 'The painful process of trying to implement our good old tape animation.',
   },
   {
     src: '/projects/diablo.png',
     title: 'Diablo IV',
-    description: 'Dark, gothic, and ruthless \u2014 hours lost in Sanctuary chasing gear that gets replaced next season. And yes, I did indeed put a picture of my school presesntation in here. I am very proud of it.',
+    description: 'Dark, gothic, and ruthless \u2014 hours lost in Sanctuary chasing gear that gets replaced next season. I even included a picture from a school presentation because I am still proud of it.',
   },
   {
     src: '/projects/chain loss.png',
