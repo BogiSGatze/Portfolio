@@ -1,6 +1,9 @@
 # Project Gallery Images
 
-Put your project screenshots here.
+Project screenshots and media used by the portfolio live in this directory.
+
+Keep images compressed, use descriptive filenames, and add alternative text at the
+point where each asset is rendered.
 
 Reference them in `src/constants/desktopData.ts` using paths like:
 ```
