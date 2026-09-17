@@ -144,7 +144,7 @@ export const PROJECTS: Project[] = [
     desc: 'This very website — a neobrutalist vaporwave portfolio...',
     image: '/projects/portfolio.png',
     githubUrl: 'https://github.com/BogisGatze/portfolio',
-    liveUrl: 'https://bogisgatze.github.io/portfolio',
+    liveUrl: 'https://portfolio-eight-zeta-48.vercel.app',
   },
   // ... 4 more projects
 ];
@@ -171,7 +171,7 @@ export const TECH_STACK = [
 
 ```typescript
 export const HOBBIES = [
-  'TFT — dangerously addicted, send help',
+  'TFT — ranked strategy enthusiast',
   'Reading — fiction, fantasy, anything good',
   'Movies — always watching something new',
   'Gaming — see Games.exe for the full list',

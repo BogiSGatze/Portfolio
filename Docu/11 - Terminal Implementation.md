@@ -248,7 +248,7 @@ if (c === 'sudo hire bogi') {
   printLine('sys', '$ sudo hire bogi');
   printLine('out', 'password: ********');
   printLine('out', 'ACCESS GRANTED');
-  printLine('out', 'Hiring manager module: disabled (corporate policy)');
+  printLine('out', 'Hiring manager module: ready. Curiosity and a sense of humour recommended.');
   printLine('out', 'Proceeding anyway... offer generated');
 }
 ```
@@ -257,7 +257,7 @@ if (c === 'sudo hire bogi') {
 
 ```typescript
 if (c === 'sudo rm -rf /') {
-  printLine('err', 'nice try. deleting your portfolio would improve performance, but not your chances.');
+  printLine('err', 'nice try. destructive commands are disabled in this tiny operating system.');
 }
 ```
 

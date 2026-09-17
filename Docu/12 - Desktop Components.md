@@ -107,7 +107,7 @@ export const PROJECTS: Project[] = [
     desc: 'This very website — a neobrutalist vaporwave portfolio...',
     image: '/projects/portfolio.png',
     githubUrl: 'https://github.com/BogisGatze/portfolio',
-    liveUrl: 'https://bogisgatze.github.io/portfolio',
+    liveUrl: 'https://portfolio-eight-zeta-48.vercel.app',
   },
   // ... more projects
 ];
