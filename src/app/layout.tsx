@@ -14,10 +14,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Bogi | Portfolio",
-  description: "Bogi's portfolio — software dev in training. Built with Next.js, React Three Fiber & TypeScript.",
+  description: "Bogi's interactive portfolio — built with Next.js, React Three Fiber, and TypeScript.",
   icons: {
     icon: '/favicon.ico',
-    // you can also specify shortcut, apple, etc. if needed
   },
 };
 
@@ -29,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* explicit favicon overrides so we don't keep seeing the default triangle */}
+        {/* Explicit favicon links help browsers avoid caching the framework default. */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
